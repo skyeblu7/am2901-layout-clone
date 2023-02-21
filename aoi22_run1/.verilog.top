@@ -1,0 +1,14 @@
+
+`timescale 1ns / 1ns
+
+module test;
+
+
+wire  y;
+
+reg  a, b, c, d;
+
+
+
+aoi22 top(y, a, b, c, d); 
+ 

@@ -1,0 +1,18 @@
+// Library - ece425mp1, Cell - nand2, View - schematic
+// LAST TIME SAVED: Feb 21 14:35:08 2023
+// NETLIST TIME: Feb 21 14:38:18 2023
+`timescale 1ns / 1ns 
+
+module nand2 ( y, a, b );
+
+output  y;
+
+input  a, b;
+
+
+specify 
+    specparam CDS_LIBNAME  = "ece425mp1";
+    specparam CDS_CELLNAME = "nand2";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+

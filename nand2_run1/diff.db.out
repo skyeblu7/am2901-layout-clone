@@ -1,0 +1,12 @@
+version {data 2.0}
+comment {data {simcompare(64) 21.03-s007 Tue Feb 21 14:51:20 2023}}
+database {logicalname g pathname /class/ece425/mp1/nand2_run1/shm.db/shm.db.trn fullpathname {"/class/ece425/mp1/nand2_run1/shm.db/shm.db.dsn"::} originalpathname {} precision -9 displayprecision -9}
+database {logicalname t pathname /home/koepcke2/ece425.work/nand2_run1/shm.db/shm.db.trn fullpathname {"/home/koepcke2/ece425.work/nand2_run1/shm.db/shm.db.dsn"::} originalpathname {} precision -9 displayprecision -9}
+parameters {precision -9 displayprecision -9 maxerrors 10 totalerrors 100 sequencetime no numerrors 0 gdblogname g tdblogname t}
+compare {type compare name c1 hierarchical yes objectypes {signals streams} state completed status success command {compare . -pos 2ns -neg 2ns -maxerrors 200} goldendbname g testdbname t depth 0 summarycounts {totalcompares 9 compsets 6 analysiswithnoerrors 6 completioncode 0} lineno 13 dbs {g t} compstyle df totalerrcount 0 maxerrors 200 totalerrors 100 stime 0ns etime pinf ptol 2ns ntol 2ns ignoreundefined neither ignoreunknown neither attrcompare 1 relcompare 1 comparebe 0}
+cset {name c1:cds_globals.gnd_ compname c1 simplename c1:sc1 compstyle tb objecttype expr gexpr cds_globals.gnd_ texpr cds_globals.gnd_ compcount 1 compstate completed comparestatus success}
+cset {name c1:cds_globals.vdd_ compname c1 simplename c1:sc2 compstyle tb objecttype expr gexpr cds_globals.vdd_ texpr cds_globals.vdd_ compcount 1 compstate completed comparestatus success}
+cset {name c1:test.a compname c1 simplename c1:sc3 compstyle tb objecttype expr gexpr test.a texpr test.a compcount 1 compstate completed comparestatus success}
+cset {name c1:test.b compname c1 simplename c1:sc4 compstyle tb objecttype expr gexpr test.b texpr test.b compcount 1 compstate completed comparestatus success}
+cset {name {c1:test.i[2:0]} compname c1 simplename c1:sc5 compstyle tb objecttype expr gexpr {test.i[2:0]} texpr {test.i[2:0]} compcount 4 compstate completed comparestatus success}
+cset {name c1:test.y compname c1 simplename c1:sc6 compstyle tb objecttype expr gexpr test.y texpr test.y compcount 1 compstate completed comparestatus success}

@@ -1,0 +1,11 @@
+cdns_dump.log
+ece425mp0/
+cds.lib
+simcompare.log
+libManager.log
+simrc
+.cadence/
+.cdsenv
+.cdsinit
+.cdsplotinit
+

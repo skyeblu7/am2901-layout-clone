@@ -1,0 +1,41 @@
+//
+// File created by:  xmxlmode
+// Do not modify this file
+//
++delay_mode_path
++typdelays
++nostdout
++nocopyright
+"+ncvlogargs+ -neverwarn -nostdout -nocopyright "
+"+ncelabargs+ -neg_tchk  -nonotifier  -sdf_NOCheck_celltype  -access +r  -pulse_e 100  -pulse_r 100  -neverwarn  -timescale 1ns/1ns -nostdout -nocopyright"
+"+ncsimargs+ -neverwarn  -nocopyright -gui -input /home/koepcke2/ece425.work/nand2_run1/.simTmpNCCmd "
++mpssession+virtuoso3915358
++mpshost+fastx3-25.ews.illinois.edu
+-NOSTDOUT
+-NOCOPYRIGHT
+-neverwarn
+-nocopyright
+-gui
+-input
+/home/koepcke2/ece425.work/nand2_run1/.simTmpNCCmd
+-MPSSESSION
+virtuoso3915358
+-MPSHOST
+fastx3-25.ews.illinois.edu
+-MESSAGES
++EMGRLOG
+simout.tmp
+-XLSTIME
+1677012425
+-XLKEEP
+-XLMODE
+./xcelium.d/run.lnx8664.21.03.d
+-RUNMODE
+-CDSLIB
+./xcelium.d/run.lnx8664.21.03.d/cds.lib
+-HDLVAR
+./xcelium.d/run.lnx8664.21.03.d/hdl.var
+-XLNAME
+xmxlmode
+-XLVERSION
+"TOOL:	xmxlmode	21.03-s007"

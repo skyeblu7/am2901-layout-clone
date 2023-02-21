@@ -1,0 +1,39 @@
+TOOL:	xmxlmode	21.03-s007: Started on Feb 21, 2023 at 14:59:51 CST
+xmxlmode
+	+delay_mode_path
+	+typdelays
+	-l
+	simout.tmp
+	/home/koepcke2/ece425.work/aoi22_run1/testfixture.template
+	-f /home/koepcke2/ece425.work/aoi22_run1/verilog.inpfiles
+		/software/ncsu-cdk-1.6.0.beta/lib/NCSU_Analog_Parts/nmos/functional/verilog.v
+		/software/ncsu-cdk-1.6.0.beta/lib/NCSU_Analog_Parts/pmos/functional/verilog.v
+		ihnl/cds0/netlist
+		hdlFilesDir/cds_globals.v
+	+nostdout
+	+nocopyright
+	+ncvlogargs+" -neverwarn -nostdout -nocopyright "
+	+ncelabargs+" -neg_tchk  -nonotifier  -sdf_NOCheck_celltype  -access +r  -pulse_e 100  -pulse_r 100  -neverwarn  -timescale 1ns/1ns -nostdout -nocopyright"
+	+ncsimargs+" -neverwarn  -nocopyright -gui -input /home/koepcke2/ece425.work/aoi22_run1/.simTmpNCCmd "
+	+mpssession+virtuoso3915358
+	+mpshost+fastx3-25.ews.illinois.edu
+xmxlmode: *W,OPDEPRREN: Command Line Option (+ncvlogargs+ -neverwarn -nostdout -nocopyright ) is deprecated. Use (+xmvlogargs+ -neverwarn -nostdout -nocopyright ) instead.
+xmxlmode: *W,OPDEPRREN: Command Line Option (+ncelabargs+ -neg_tchk  -nonotifier  -sdf_NOCheck_celltype  -access +r  -pulse_e 100  -pulse_r 100  -neverwarn  -timescale 1ns/1ns -nostdout -nocopyright) is deprecated. Use (+xmelabargs+ -neg_tchk  -nonotifier  -sdf_NOCheck_celltype  -access +r  -pulse_e 100  -pulse_r 100  -neverwarn  -timescale 1ns/1ns -nostdout -nocopyright) instead.
+xmxlmode: *W,OPDEPRREN: Command Line Option (+ncsimargs+ -neverwarn  -nocopyright -gui -input /home/koepcke2/ece425.work/aoi22_run1/.simTmpNCCmd ) is deprecated. Use (+xmsimargs+ -neverwarn  -nocopyright -gui -input /home/koepcke2/ece425.work/aoi22_run1/.simTmpNCCmd ) instead.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /software/cadence-2021-09/XCELIUM2103/tools/xcelium/files/xmsimrc
+xcelium> database -open shmWave -shm -default -into shm.db
+Created default SHM database shmWave
+xcelium> probe -create -shm test  -all   -depth 1
+Created probe 1
+xcelium> probe -create cds_globals -shm
+Created probe 2
+xcelium> run
+Simulation complete via $finish(1) at time 800 NS + 0
+./testfixture.verilog:17 	#(50*16) $finish;
+xcelium> ^C
+xcelium> exit
+TOOL:	xmxlmode	21.03-s007: Exiting on Feb 21, 2023 at 15:01:57 CST  (total: 00:02:06)

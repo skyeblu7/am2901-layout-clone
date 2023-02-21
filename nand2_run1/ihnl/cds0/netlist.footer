@@ -1,0 +1,6 @@
+pfet M1 ( y, cds_globals.vdd_, b);
+pfet M0 ( y, cds_globals.vdd_, a);
+nfet M3 ( net1, cds_globals.gnd_, a);
+nfet M2 ( y, net1, b);
+
+endmodule

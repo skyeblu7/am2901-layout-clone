@@ -1,0 +1,23 @@
+
+`timescale 1ns / 1ns
+
+module test;
+
+
+wire  y;
+
+reg  a, b, c, d;
+
+
+
+aoi22 top(y, a, b, c, d); 
+ 
+
+`ifdef verilog
+
+ //please enter any additional verilog stimulus in the /home/koepcke2/ece425.work/aoi22_run1/testfixture.verilog file
+`include "/home/koepcke2/ece425.work/aoi22_run1/testfixture.verilog"
+
+`endif
+
+endmodule 
