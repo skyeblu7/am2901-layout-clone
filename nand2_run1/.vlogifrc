@@ -361,7 +361,7 @@ simNCVerilogLogFile = "simout.tmp"
 simNCVerilogVCompGoldenDbPath = "/class/ece425/mp1/nand2_run1/shm.db/shm.db.trn"
 
 ;Compare Database File
-simNCVerilogVCompCompareDbPath = "nand2_run1/shm.db/shm.db.trn"
+simNCVerilogVCompCompareDbPath = "/home/koepcke2/ece425.work/nand2_run1/shm.db/shm.db.trn"
 
 ;Start Time
 simNCVerilogVCompStartTime = 0

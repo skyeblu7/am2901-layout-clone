@@ -1,5 +1,5 @@
 version {data 2.0}
-comment {data {simcompare(64) 21.03-s007 Tue Feb 21 14:51:20 2023}}
+comment {data {simcompare(64) 21.03-s007 Sat Feb 25 22:37:26 2023}}
 database {logicalname g pathname /class/ece425/mp1/nand2_run1/shm.db/shm.db.trn fullpathname {"/class/ece425/mp1/nand2_run1/shm.db/shm.db.dsn"::} originalpathname {} precision -9 displayprecision -9}
 database {logicalname t pathname /home/koepcke2/ece425.work/nand2_run1/shm.db/shm.db.trn fullpathname {"/home/koepcke2/ece425.work/nand2_run1/shm.db/shm.db.dsn"::} originalpathname {} precision -9 displayprecision -9}
 parameters {precision -9 displayprecision -9 maxerrors 10 totalerrors 100 sequencetime no numerrors 0 gdblogname g tdblogname t}

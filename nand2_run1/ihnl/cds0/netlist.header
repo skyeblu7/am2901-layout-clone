@@ -1,6 +1,6 @@
 // Library - ece425mp1, Cell - nand2, View - schematic
-// LAST TIME SAVED: Feb 21 14:35:08 2023
-// NETLIST TIME: Feb 21 14:38:18 2023
+// LAST TIME SAVED: Feb 25 18:28:21 2023
+// NETLIST TIME: Feb 25 22:31:38 2023
 `timescale 1ns / 1ns 
 
 module nand2 ( y, a, b );

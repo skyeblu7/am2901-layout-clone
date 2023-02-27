@@ -31,9 +31,11 @@ si: simSetDef().... simTimeUnit is initialized to 1e-09 .
 si: simSetDef().... simCapUnit is initialized to 1e-15 .
 si: simSetDef().... simDoNetlist is initialized to t .
 si: simSetDef().... simDoSimulate is initialized to t .
-si: simSetDef().... simNetlistHier is initialized to "nil".
+si: simSetDef().... simNetlistHier is already set to t. Redefinition to nil is
+ignored.
 si: simSetDef().... simGlobalPrefix is initialized to "nil".
-si: simSetDef().... simHierarchyPrefix is initialized to "nil".
+si: simSetDef().... simHierarchyPrefix is already set to "test.top".
+Redefinition to nil is ignored.
 si: simSetDef().... simNoLeadingHierarchyDelim is initialized to "nil".
 si: simSetDef().... simPrefixHierarchyWithCV is initialized to "nil".
 si: simSetDef().... simHierarchyDelimiter is initialized to "/" .
@@ -491,7 +493,6 @@ si: simSetDef().... hnlIncrementalOnly is initialized to t .
 si: simSetDef().... hnlModulePrefix is initialized to "cdsModule_" .
 si: simSetDef().... hnlGlobalNetPrefix is initialized to "global_" .
 si: simSetDef().... simVerilogFlattenBuses is initialized to "nil".
-si: simSetDef().... simVerilogBusJustificationStr is initialized to "U" .
 si: simSetDef().... vlogifRefLibExtension is initialized to ".v" .
 si: simSetDef().... vlogifLibDefinePrefix is initialized to "def_" .
 si: simSetDef().... simNetNamePrefix is initialized to "cdsNet" .
@@ -581,7 +582,7 @@ si: simSetDef().... hnlVerilogPrimitiveList is initialized to ("tran" "tranif0"
 "tranif1" "rtran" "rtranif0" "rtranif1" "pullup" "pulldown" "nmos" "pmos" "cmos"
 "rpmos" "rcmos" "rnmos" "and" "nand" "nor" "or" "xor" "xnor" "buf" "not") .
 Loading the file
-'/software/cadence-2021-09/IC618/tools.lnx86/dfII/etc/skill/hnl/driver.ile'.Begin Incremental Netlisting Feb 21 14:38:18 2023
+'/software/cadence-2021-09/IC618/tools.lnx86/dfII/etc/skill/hnl/driver.ile'.Begin Incremental Netlisting Feb 25 22:31:38 2023
 si: simSetDef().... hnlInvalidNames is initialized to (("always" "always_")
 ("and" "and_") ("assign" "assign_") ("automatic" "automatic_") ("begin"
 "begin_") ("buf" "buf_") ("bufif0" "bufif0_") ("bufif1" "bufif1_") ("case"
@@ -861,6 +862,22 @@ pins with initial state of "0", set
 hnlVerilogIOInitStimulusStr = "0" 
 either in CIW or the .simrc file.
  
+WARNING (OSSHNL-117): Ignoring switch view 'schematic' of cell 'vdd' in library
+'basic', as it does not contain
+any instance. To netlist this cell, add this
+switch view to the stop list or to
+ignore any specific instance set the property
+'nlAction' to value "ignore" on
+this cell view.
+
+WARNING (OSSHNL-117): Ignoring switch view 'schematic' of cell 'gnd' in library
+'basic', as it does not contain
+any instance. To netlist this cell, add this
+switch view to the stop list or to
+ignore any specific instance set the property
+'nlAction' to value "ignore" on
+this cell view.
+
 INFO (VLOGNET-120): Using connection by order (implicit connections) for all the
 stopping cells.
 
@@ -895,4 +912,4 @@ nand2                       schematic
 INFO (VLOGNET-80): The library 'ece425mp1', cell 'nand2', and view 'schematic'
 has been netlisted successfully.
 
-End netlisting Feb 21 14:38:19 2023
+End netlisting Feb 25 22:31:39 2023

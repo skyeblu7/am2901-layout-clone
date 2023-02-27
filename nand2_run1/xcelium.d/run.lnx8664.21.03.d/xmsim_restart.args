@@ -9,8 +9,8 @@
 "+ncvlogargs+ -neverwarn -nostdout -nocopyright "
 "+ncelabargs+ -neg_tchk  -nonotifier  -sdf_NOCheck_celltype  -access +r  -pulse_e 100  -pulse_r 100  -neverwarn  -timescale 1ns/1ns -nostdout -nocopyright"
 "+ncsimargs+ -neverwarn  -nocopyright -gui -input /home/koepcke2/ece425.work/nand2_run1/.simTmpNCCmd "
-+mpssession+virtuoso3915358
-+mpshost+fastx3-25.ews.illinois.edu
++mpssession+virtuoso1257347
++mpshost+fastx3-30.ews.illinois.edu
 -NOSTDOUT
 -NOCOPYRIGHT
 -neverwarn
@@ -19,14 +19,14 @@
 -input
 /home/koepcke2/ece425.work/nand2_run1/.simTmpNCCmd
 -MPSSESSION
-virtuoso3915358
+virtuoso1257347
 -MPSHOST
-fastx3-25.ews.illinois.edu
+fastx3-30.ews.illinois.edu
 -MESSAGES
 +EMGRLOG
 simout.tmp
 -XLSTIME
-1677012425
+1677385974
 -XLKEEP
 -XLMODE
 ./xcelium.d/run.lnx8664.21.03.d
@@ -40,4 +40,4 @@ xmxlmode
 -XLVERSION
 "TOOL:	xmxlmode	21.03-s007"
 -XLNAME
-./xcelium.d/run.lnx8664.21.03.d/fastx3-25.ews.illinois.edu_3936832
+./xcelium.d/run.lnx8664.21.03.d/fastx3-30.ews.illinois.edu_1263462

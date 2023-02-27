@@ -1,4 +1,4 @@
-TOOL:	xmxlmode	21.03-s007: Started on Feb 21, 2023 at 14:59:51 CST
+TOOL:	xmxlmode	21.03-s007: Started on Feb 25, 2023 at 18:47:18 CST
 xmxlmode
 	+delay_mode_path
 	+typdelays
@@ -15,8 +15,8 @@ xmxlmode
 	+ncvlogargs+" -neverwarn -nostdout -nocopyright "
 	+ncelabargs+" -neg_tchk  -nonotifier  -sdf_NOCheck_celltype  -access +r  -pulse_e 100  -pulse_r 100  -neverwarn  -timescale 1ns/1ns -nostdout -nocopyright"
 	+ncsimargs+" -neverwarn  -nocopyright -gui -input /home/koepcke2/ece425.work/aoi22_run1/.simTmpNCCmd "
-	+mpssession+virtuoso3915358
-	+mpshost+fastx3-25.ews.illinois.edu
+	+mpssession+virtuoso2673334
+	+mpshost+fastx3-18.ews.illinois.edu
 xmxlmode: *W,OPDEPRREN: Command Line Option (+ncvlogargs+ -neverwarn -nostdout -nocopyright ) is deprecated. Use (+xmvlogargs+ -neverwarn -nostdout -nocopyright ) instead.
 xmxlmode: *W,OPDEPRREN: Command Line Option (+ncelabargs+ -neg_tchk  -nonotifier  -sdf_NOCheck_celltype  -access +r  -pulse_e 100  -pulse_r 100  -neverwarn  -timescale 1ns/1ns -nostdout -nocopyright) is deprecated. Use (+xmelabargs+ -neg_tchk  -nonotifier  -sdf_NOCheck_celltype  -access +r  -pulse_e 100  -pulse_r 100  -neverwarn  -timescale 1ns/1ns -nostdout -nocopyright) instead.
 xmxlmode: *W,OPDEPRREN: Command Line Option (+ncsimargs+ -neverwarn  -nocopyright -gui -input /home/koepcke2/ece425.work/aoi22_run1/.simTmpNCCmd ) is deprecated. Use (+xmsimargs+ -neverwarn  -nocopyright -gui -input /home/koepcke2/ece425.work/aoi22_run1/.simTmpNCCmd ) instead.
@@ -36,4 +36,4 @@ Simulation complete via $finish(1) at time 800 NS + 0
 ./testfixture.verilog:17 	#(50*16) $finish;
 xcelium> ^C
 xcelium> exit
-TOOL:	xmxlmode	21.03-s007: Exiting on Feb 21, 2023 at 15:01:57 CST  (total: 00:02:06)
+TOOL:	xmxlmode	21.03-s007: Exiting on Feb 25, 2023 at 18:47:50 CST  (total: 00:00:32)

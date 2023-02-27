@@ -17,7 +17,7 @@ alias ic618="$SOFTPATH/cadence-2021-09/IC618/bin/virtuoso"
 export CDSHOME=$SOFTPATH/cadence-2021-09/IC618
 #export QRC_HOME=$SOFTPATH/cadence-2021-09/EXT618
 #export ASSURAHOME=$SOFTPATH/cadence-2021-09/ASSURA41
-#export CDS_Netlisting_Mode=Analog
+export CDS_Netlisting_Mode=Analog
 
 if [ ! -f .cdsenv ]
 then

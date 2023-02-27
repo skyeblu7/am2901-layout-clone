@@ -400,13 +400,13 @@ simNCVerilogVCompClkHoldTime = 0
 simNCVerilogVCompClkEdge = "Positive"
 
 ;Rule File
-simNCVerilogVCompScriptFile = "/home/koepcke2/ece425.work/aoi22_run1/compare.rule"
+simNCVerilogVCompScriptFile = "/home/koepcke2/ece425.work/nand2_run1/compare.rule"
 
 ;Max. Mismatches
 simNCVerilogVCompMaxCompareMismatches = 200
 
 ;Path to Database
-simNCVerilogVCompCompareResultsDirPath = "/home/koepcke2/ece425.work/aoi22_run1"
+simNCVerilogVCompCompareResultsDirPath = "/home/koepcke2/ece425.work/nand2_run1"
 
 ;Difference Database
 simNCVerilogVCompCompareResultsDirName = "diff.db.out"
