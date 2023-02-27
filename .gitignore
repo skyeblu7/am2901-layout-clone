@@ -8,4 +8,6 @@ simrc
 .cdsenv
 .cdsinit
 .cdsplotinit
-
+LVS/
+*run1/
+*.v
