@@ -1,0 +1,136 @@
+
+================================================================================
+
+Compare set name: c1 (hierarchical)
+
+Databases:
+
+  Logical   Database                                                       
+  Name      Pathname                                                       Type
+  ===============================================================================
+  g         /class/ece425/mp1/adder_8bit_run1/shm.db/shm.db.trn            Golden
+  t         /home/koepcke2/ece425.work/adder_8bit_run1/shm.db/shm.db.trn   Test
+
+Compare command:
+
+  compare . -pos 2ns -neg 2ns -maxerrors 200
+
+Comparison parameters:
+
+  Total error limit:  100
+  This error limit:   200
+  Depth:              No limit
+  Negative tolerance: 2ns
+  Positive tolerance: 2ns
+  Start time:         0ns
+  End time:           18446744073.709551615s
+
+Comparison summary:
+
+  Successful compares: 8/8
+  No problems found.
+
+================================================================================
+
+Compare set name: c1:cds_globals.gnd_
+
+Comparison parameters:
+
+  Golden expression: g::cds_globals.gnd_
+  Test expression:   t::cds_globals.gnd_
+
+Comparison summary:
+
+  No problems found.
+
+================================================================================
+
+Compare set name: c1:cds_globals.vdd_
+
+Comparison parameters:
+
+  Golden expression: g::cds_globals.vdd_
+  Test expression:   t::cds_globals.vdd_
+
+Comparison summary:
+
+  No problems found.
+
+================================================================================
+
+Compare set name: c1:test.a[7:0]
+
+Comparison parameters:
+
+  Golden expression: g::test.a[7:0]
+  Test expression:   t::test.a[7:0]
+
+Comparison summary:
+
+  No problems found.
+
+================================================================================
+
+Compare set name: c1:test.b[7:0]
+
+Comparison parameters:
+
+  Golden expression: g::test.b[7:0]
+  Test expression:   t::test.b[7:0]
+
+Comparison summary:
+
+  No problems found.
+
+================================================================================
+
+Compare set name: c1:test.cin
+
+Comparison parameters:
+
+  Golden expression: g::test.cin
+  Test expression:   t::test.cin
+
+Comparison summary:
+
+  No problems found.
+
+================================================================================
+
+Compare set name: c1:test.cout
+
+Comparison parameters:
+
+  Golden expression: g::test.cout
+  Test expression:   t::test.cout
+
+Comparison summary:
+
+  No problems found.
+
+================================================================================
+
+Compare set name: c1:test.i[16:0]
+
+Comparison parameters:
+
+  Golden expression: g::test.i[16:0]
+  Test expression:   t::test.i[16:0]
+
+Comparison summary:
+
+  No problems found.
+
+================================================================================
+
+Compare set name: c1:test.sum[7:0]
+
+Comparison parameters:
+
+  Golden expression: g::test.sum[7:0]
+  Test expression:   t::test.sum[7:0]
+
+Comparison summary:
+
+  No problems found.
+
