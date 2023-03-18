@@ -1,0 +1,110 @@
+@(#)$CDS: LVS version 6.1.8-64b 08/17/2021 19:16 (cpgsrv12) $
+
+Command line: /software/cadence-2021-09/IC618/tools.lnx86/dfII/bin/64bit/LVS -dir /home/koepcke2/ece425.work/LVS -l -s -t /home/koepcke2/ece425.work/LVS/layout /home/koepcke2/ece425.work/LVS/schematic
+Like matching is enabled.
+Net swapping is enabled.
+Using terminal names as correspondence points.
+
+    Net-list summary for /home/koepcke2/ece425.work/LVS/layout/netlist
+       count
+        147             nets
+        26              terminals
+        128             pmos
+        128             nmos
+
+    Net-list summary for /home/koepcke2/ece425.work/LVS/schematic/netlist
+       count
+        147             nets
+        28              terminals
+        128             pmos
+        128             nmos
+
+
+    Terminal correspondence points
+    N128      N9        a<0>
+    N125      N8        a<1>
+    N122      N7        a<2>
+    N145      N6        a<3>
+    N141      N5        a<4>
+    N137      N4        a<5>
+    N134      N3        a<6>
+    N132      N2        a<7>
+    N143      N17       b<0>
+    N140      N16       b<1>
+    N136      N15       b<2>
+    N133      N14       b<3>
+    N130      N13       b<4>
+    N127      N12       b<5>
+    N124      N11       b<6>
+    N121      N10       b<7>
+    N144      N26       cin
+    N138      N27       cout
+    N131      N25       sum<0>
+    N129      N24       sum<1>
+    N126      N23       sum<2>
+    N123      N22       sum<3>
+    N146      N21       sum<4>
+    N142      N20       sum<5>
+    N139      N19       sum<6>
+    N135      N18       sum<7>
+
+Devices in the netlist but not in the rules:
+        pmos nmos
+
+The net-lists match.
+
+                             layout  schematic
+                                instances
+        un-matched              0       0      
+        rewired                 0       0      
+        size errors             0       0      
+        pruned                  0       0      
+        active                  256     256    
+        total                   256     256    
+
+                                  nets
+        un-matched              0       0      
+        merged                  0       0      
+        pruned                  0       0      
+        active                  147     147    
+        total                   147     147    
+
+                                terminals
+        un-matched              0       0      
+        matched but
+        different type          0       0      
+        total                   26      28     
+
+
+Probe files from /home/koepcke2/ece425.work/LVS/schematic
+
+devbad.out:
+
+netbad.out:
+
+mergenet.out:
+
+termbad.out:
+
+prunenet.out:
+
+prunedev.out:
+
+audit.out:
+
+
+Probe files from /home/koepcke2/ece425.work/LVS/layout
+
+devbad.out:
+
+netbad.out:
+
+mergenet.out:
+
+termbad.out:
+
+prunenet.out:
+
+prunedev.out:
+
+audit.out:
