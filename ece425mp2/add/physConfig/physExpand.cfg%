@@ -1,0 +1,16 @@
+//Revision 3
+//NOTE
+//VXL Configuration
+//END_NOTE
+
+config add;
+design mp2Original.add:schematic;
+liblist mp2Original;
+
+viewlist physConfig, schematic, symbol;
+
+constraintviewlist constraint;
+stoplist layout, abstract;
+
+
+endconfig
