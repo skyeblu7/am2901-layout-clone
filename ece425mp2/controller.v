@@ -12,6 +12,12 @@ module controller(
 
 	// ===== Added signal =====
 	, select_q_reg[1:0]
+	, inv_r
+	, inv_s
+	, sel_f0
+	, not_sel_f0
+	, sel_f1
+	, not_sel_f1
 
 	// ===== Added signal ended =====
 );
@@ -31,6 +37,14 @@ input q0_data, q3_data;
 
 // ===== Added signal =====
 output select_q_reg[1:0];
+
+// ALU signals
+output inv_r;
+output inv_s;
+output sel_f0;
+output not_sel_f0;
+output sel_f1;
+output not_sel_f1;
 
 // ====== Added signal ended =====
 
@@ -62,6 +76,16 @@ bufif1 drvqshr( q0,	q0_data, shift_right );
 
  // add your control signals here...
 //assign reg_wr = ;
+
+
+// ALU signals
+assign inv_r = ~i[4]&i[3];
+assign inv_s = ~i[5]&i[4]&~i[3] || i[5]&i[4]&i[3];
+assign sel_f0 = i[4]&i[3] || i[5]&i[4];
+assign not_sel_f0 = ~sel_f0;
+assign sel_f1 = i[5];
+assign not_sel_f1 = ~sel_f1;
+
 //end
 
 always @(*) begin

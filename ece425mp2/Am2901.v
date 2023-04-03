@@ -24,6 +24,15 @@ wire [3:0] f, c, p, y_data;
 wire q0_data, q3_data;
 wire reg_wr;
 
+// ALU control signals
+wire inv_r;
+wire inv_s;
+wire sel_f0;
+wire not_sel_f0;
+wire sel_f1;
+wire not_sel_f1;
+
+
  // DON'T add extra logic here - 
 	// the Am2901 module only ties together the controller + datapath.
  // DO add extra signals tied directly between the controller + datapath -
@@ -43,6 +52,15 @@ controller control ( // instantiate either RTL (MP2) or synthesized logic (MP3)
 
 	// ===== Added signal =====
 	,.select_q_reg()
+
+	// ALU Signals
+	, .inv_r(inv_r)
+	, .inv_s(inv_s)
+	, .sel_f0(sel_f0)
+	, .not_sel_f0(not_sel_f0)
+	, .sel_f1(sel_f1)
+	, .not_sel_f1(not_sel_f1)
+	
 	// ===== Added signal ended =====
 );
 
