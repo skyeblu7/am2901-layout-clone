@@ -53,7 +53,7 @@ controller control ( // instantiate either RTL (MP2) or synthesized logic (MP3)
 	// ===== Added signal =====
 	,.select_q_reg()
 
-	// ALU Signals
+	// ALU Signals (still need to deal with +1 to cin for subtraction)
 	, .inv_r(inv_r)
 	, .inv_s(inv_s)
 	, .sel_f0(sel_f0)
