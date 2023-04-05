@@ -12,12 +12,17 @@ module controller(
 
 	// ===== Added signal =====
 	, select_q_reg[1:0]
+
+	// ALU signals
 	, inv_r
 	, inv_s
 	, sel_f0
 	, not_sel_f0
 	, sel_f1
 	, not_sel_f1
+
+
+	
 
 	// ===== Added signal ended =====
 );
