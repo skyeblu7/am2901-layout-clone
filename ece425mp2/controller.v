@@ -11,7 +11,7 @@ module controller(
 	//,reg_wr      //add additiona signals for your design here
 
 	// ===== Added signal =====
-	, select_q_reg[1:0]
+	, select_q_reg
 
 	// ALU signals
 	, inv_r
@@ -96,10 +96,10 @@ assign not_sel_f1 = ~sel_f1;
 always @(*) begin
 	// select_q_reg[1:0]
 	// 	2'd0: none, 2'd1: shift right, 2'd2: load F, 2'd3: shift left
-	if(shift_right & (~i[6]))		select_q_reg = 2'd1;
-	else if(shift_left & (~i[6]))	select_q_reg = 2'd3;
-	else if(i[8:6] == 3'd0)			select_q_reg = 2'd2;
-	else							select_q_reg = 2'd0;
+	if(shift_right & (~i[6]))		select_q_reg = 2'd1; //i8i7i6 = 100; Q/2 -> Q
+	else if(shift_left & (~i[6]))	select_q_reg = 2'd3; //i8i7i6 = 110; 2Q  -> Q
+	else if(i[8:6] == 3'd0)			select_q_reg = 2'd2; //i8i7i6 = 000; F   -> Q
+	else							select_q_reg = 2'd0; //else			 Q   -> Q
 
 	
 end
