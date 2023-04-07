@@ -126,7 +126,7 @@ always @(*) begin
 
 	// regfile signals
 	// reg_wr
-	reg_wr = (~i[8]) & (~i[7]);
+	reg_wr = i[8] | i[7];
 	// select_regfile [1:0]
 	case (i[8:7])
 		2'd0: select_regfile = 2'd1; //default DONT CARE, reg_wr == 0
