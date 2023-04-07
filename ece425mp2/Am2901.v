@@ -24,6 +24,13 @@ wire [3:0] f, c, p, y_data;
 wire q0_data, q3_data;
 wire reg_wr;
 
+//mux signals
+wire [1:0] 	select_q_reg;
+wire [1:0] 	select_regfile;
+wire [1:0] 	select_ALU_r;
+wire [1:0] 	select_ALU_s;
+wire		select_y;
+
 // ALU control signals
 wire inv_r;
 wire inv_s;
@@ -51,7 +58,11 @@ controller control ( // instantiate either RTL (MP2) or synthesized logic (MP3)
 	.q0(q0), .q3(q3), .q0_data(q0_data), .q3_data(q3_data)		// tristate control of Q shifter
 
 	// ===== Added signal =====
-	,.select_q_reg()
+	, .select_q_reg(select_q_reg)
+	, .select_regfile(select_regfile)
+	, .select_ALU_r(select_ALU_r)
+	, .select_ALU_s(select_ALU_s)
+	, .select_y(select_y)
 
 	// ALU Signals (still need to deal with +1 to cin for subtraction)
 	, .inv_r(inv_r)
@@ -73,6 +84,21 @@ datapath data ( // instantiate your design schematics from Virtuoso
 	.y(y_data), 						// global chip output
 	.q0_out(q0_data), .q3_out(q3_data), 			// shift register outputs
 	.f0_in(ram0), .f3_in(ram3), .q0_in(q0), .q3_in(q3)		// shift register inputs
+
+	// ===== Added signal =====
+	, .select_q_reg(select_q_reg)
+	, .select_regfile(select_regfile)
+	, .select_ALU_r(select_ALU_r)
+	, .select_ALU_s(select_ALU_s)
+	, .select_y(select_y)
+
+	// ALU Signals (still need to deal with +1 to cin for subtraction)
+	, .inv_r(inv_r)
+	, .inv_s(inv_s)
+	, .sel_f0(sel_f0)
+	, .not_sel_f0(not_sel_f0)
+	, .sel_f1(sel_f1)
+	, .not_sel_f1(not_sel_f1)
 )
 
 endmodule
