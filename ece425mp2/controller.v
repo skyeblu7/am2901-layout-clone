@@ -13,17 +13,22 @@ module controller(
 	// ===== Added signal =====
 	// Q reg mux signals
 	, select_q_reg
+	, select_q_reg_n
 
 	// regfile mux signals
 	, reg_wr
 	, select_regfile
+	, select_regfile_n
 
 	// ALU mux signals
 	, select_ALU_r
 	, select_ALU_s
+	, select_ALU_r_n
+	, select_ALU_s_n
 
 	//output mux signal
 	, select_y
+	, select_y_n
 
 	// ALU signals
 	, inv_r
@@ -54,16 +59,16 @@ input q0_data, q3_data;
 
 // ===== Added signal =====
 // Q reg mux signals
-output reg [1:0] select_q_reg;
+output reg [1:0] select_q_reg, select_q_reg_n;
 // regfile mux signals
 output reg reg_wr;
-output reg [1:0] select_regfile;
+output reg [1:0] select_regfile, select_regfile_n;
 // ALU mux signals
-output reg [1:0] select_ALU_r;
-output reg [1:0] select_ALU_s;
+output reg [1:0] select_ALU_r, select_ALU_r_n;
+output reg [1:0] select_ALU_s, select_ALU_s_n;
 
 //output mux signal
-output reg select_y;
+output reg select_y, select_y_n;
 
 // ALU signals
 output inv_r;
@@ -113,6 +118,7 @@ assign not_sel_f0 = ~sel_f0;
 assign sel_f1 = i[5];
 assign not_sel_f1 = ~sel_f1;
 
+
 //end
 
 always @(*) begin
@@ -123,6 +129,7 @@ always @(*) begin
 	else if(shift_left & (~i[6]))	select_q_reg = 2'd3; //i8i7i6 = 110; 2Q  -> Q
 	else if(i[8:6] == 3'd0)			select_q_reg = 2'd2; //i8i7i6 = 000; F   -> Q
 	else							select_q_reg = 2'd0; //else			 Q   -> Q
+	select_q_reg_n = ~select_q_reg;
 
 	// regfile signals
 	// reg_wr
@@ -134,6 +141,7 @@ always @(*) begin
 		2'd2: select_regfile = 2'd0; //F/2 -> B
 		2'd3: select_regfile = 2'd2; //2F  -> B
 	endcase
+	select_regfile_n = ~select_regfile;
 
 	// ALU mux signals
 	// select_ALU_r: 
@@ -150,6 +158,8 @@ always @(*) begin
 		3'd6: select_ALU_r = 2'd0; 
 		3'd7: select_ALU_r = 2'd0; 
 	endcase
+	select_ALU_r_n = ~select_ALU_r;
+
 	// select_ALU_s: 
 	// 2'd0: A
 	// 2'd1: B
@@ -165,11 +175,12 @@ always @(*) begin
 		3'd6: select_ALU_s = 2'd2; 
 		3'd7: select_ALU_s = 2'd3; 
 	endcase
+	select_ALU_s_n = ~select_ALU_s;
 
 	//select_y
 	if(i[8:6] == 3'b010) select_y = 1'b0;
 	else				 select_y = 1'b1;
-
+	select_y_n = ~select_y;
 	
 end
 
