@@ -99,6 +99,6 @@ datapath data ( // instantiate your design schematics from Virtuoso
 	, .not_sel_f0(not_sel_f0)
 	, .sel_f1(sel_f1)
 	, .not_sel_f1(not_sel_f1)
-)
+);
 
 endmodule

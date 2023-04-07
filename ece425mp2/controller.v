@@ -54,16 +54,16 @@ input q0_data, q3_data;
 
 // ===== Added signal =====
 // Q reg mux signals
-output [1:0] select_q_reg;
+output reg [1:0] select_q_reg;
 // regfile mux signals
-output reg_wr;
-output [1:0] select_regfile;
+output reg reg_wr;
+output reg [1:0] select_regfile;
 // ALU mux signals
-output [1:0] select_ALU_r;
-output [1:0] select_ALU_s;
+output reg [1:0] select_ALU_r;
+output reg [1:0] select_ALU_s;
 
 //output mux signal
-output select_y;
+output reg select_y;
 
 // ALU signals
 output inv_r;
