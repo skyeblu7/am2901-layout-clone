@@ -30,6 +30,11 @@ wire [1:0] 	select_regfile;
 wire [1:0] 	select_ALU_r;
 wire [1:0] 	select_ALU_s;
 wire		select_y;
+wire [1:0] 	select_q_reg_n;
+wire [1:0] 	select_regfile_n;
+wire [1:0] 	select_ALU_r_n;
+wire [1:0] 	select_ALU_s_n;
+wire		select_y_n;
 
 // ALU control signals
 wire inv_r;
@@ -63,6 +68,11 @@ controller control ( // instantiate either RTL (MP2) or synthesized logic (MP3)
 	, .select_ALU_r(select_ALU_r)
 	, .select_ALU_s(select_ALU_s)
 	, .select_y(select_y)
+	, .select_q_reg_n(select_q_reg_n)
+	, .select_regfile_n(select_regfile_n)
+	, .select_ALU_r_n(select_ALU_r_n)
+	, .select_ALU_s_n(select_ALU_s_n)
+	, .select_y_n(select_y_n)
 
 	// ALU Signals (still need to deal with +1 to cin for subtraction)
 	, .inv_r(inv_r)
@@ -91,6 +101,11 @@ datapath data ( // instantiate your design schematics from Virtuoso
 	, .select_ALU_r(select_ALU_r)
 	, .select_ALU_s(select_ALU_s)
 	, .select_y(select_y)
+	, .select_q_reg_n(select_q_reg_n)
+	, .select_regfile_n(select_regfile_n)
+	, .select_ALU_r_n(select_ALU_r_n)
+	, .select_ALU_s_n(select_ALU_s_n)
+	, .select_y_n(select_y_n)
 
 	// ALU Signals (still need to deal with +1 to cin for subtraction)
 	, .inv_r(inv_r)
