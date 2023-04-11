@@ -36,6 +36,8 @@ wire [1:0] 	select_ALU_r_n;
 wire [1:0] 	select_ALU_s_n;
 wire		select_y_n;
 
+wire cp_n;
+
 // ALU control signals
 wire inv_r;
 wire inv_s;
@@ -52,6 +54,7 @@ wire not_sel_f1;
 
 assign cout = c[3];
 assign f3 = f[3];
+assign cp_n = ~cp;
 
 controller control ( // instantiate either RTL (MP2) or synthesized logic (MP3)
 	.i(i),								// opcode
@@ -87,6 +90,7 @@ controller control ( // instantiate either RTL (MP2) or synthesized logic (MP3)
 
 datapath data ( // instantiate your design schematics from Virtuoso
 	.cp(cp), 						// clock
+	.cp_n(cp_n),
 	.reg_wr(reg_wr), 					// (add your decoded signals)
 	.select_a_hi(select_a_hi),  .select_b_hi(select_b_hi),	// decoded register selects (feel free to add more)
 	.d(d), .cin(cin),						// datapath inputs
