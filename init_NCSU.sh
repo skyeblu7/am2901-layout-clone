@@ -37,10 +37,10 @@ then
     cp $CLASS/init_script/cdsplotinit .cdsplotinit
 fi
 
-if [ ! -f simrc ]
+if [ ! -f .simrc ]
 then
     echo "Copying simrc"
-    cp $CLASS/simrc .
+    cp $CLASS/simrc .simrc
 fi
 
 #export LM_LICENSE_FILE="27005@synopsys.webstore.illinois.edu:5280@cadence.webstore.illinois.edu"

@@ -1,12 +1,12 @@
 cdns_dump.log
 ece425mp0/
-cds.lib
+#cds.lib
 simcompare.log
 libManager.log
-simrc
+#simrc
 .cadence/
-.cdsenv
-.cdsinit
-.cdsplotinit
+#.cdsenv
+#.cdsinit
+#.cdsplotinit
 LVS/
 *run1/

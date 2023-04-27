@@ -1,0 +1,40 @@
+Hewlett-Packard LaserJet 4MV, PS|Hewlett-Packard LaserJet 4MV, PS: \
+	:manufacturer=Hewlett-Packard: \
+	:type=postscript2: \
+	:spool=lp: \
+	:query=lpstat: \
+	:remove=lprm $1: \
+	:resolution#600: \
+	:maximumPages#10: \
+	:paperSize="A4" 4600 6660 150 150: \
+	:paperSize="letter" 4600 6350 150 150:
+
+Generic 300 dpi Adobe PostScript Level 1 Plotter|Generic 300 dpi Adobe PostScript Level 1 Plotter: \
+	:manufacturer=Adobe: \
+	:type=postscript1: \
+	:spool=lp: \
+	:query=lpstat: \
+	:remove=lprm $1: \
+	:resolution#300: \
+	:maximumPages#10: \
+	:paperSize="A4" 2300 3330 75 75: \
+	:paperSize="letter" 2300 3000 75 75:
+
+Generic 300 dpi Adobe PostScript Level 2 Plotter|Generic 300 dpi Adobe PostScript Level 2 Plotter: \
+	:manufacturer=Adobe: \
+	:type=postscript2: \
+	:spool=lp: \
+	:query=lpstat: \
+	:remove=lprm $1: \
+	:resolution#300: \
+	:maximumPages#10: \
+	:paperSize="A4" 2300 3330 75 75: \
+	:paperSize="letter" 2300 3000 75 75:
+
+Encapsulated PostScript|Encapsulated PostScript: \
+	:manufacturer=Adobe: \
+	:type=epsf: \
+	:resolution#300: \
+	:maximumPages#1: \
+	:paperSize="Unlimited" 72000 72000:
+

@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      koepcke2
+HostName                       fastx3-24.ews.illinois.edu
+ProcessIdentifier              443524
+ProcessCreationTime_UTC        1682408397
+ProcessCreationTime_Readable   Tue Apr 25 02:39:57 2023 CDT
+AppIdentifier                  OA File System Design Manager
+OSType                         unix
+ReasonForPlacingEditLock       OpenAccess edit lock
+FilePathUsedToEditLock         /home/koepcke2/ece425.work/ece425mp2/alu/schematic/sch.oa.cdslck
+TimeEditLocked                 Tue Apr 25 07:30:44 2023 CDT
