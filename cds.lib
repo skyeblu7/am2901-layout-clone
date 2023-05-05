@@ -1,3 +1,5 @@
+# File Created by hanyuyw2 at Wed Apr 26 21:24:44 2023
+# assisted by CdsLibEditor
 # File Created by Curtis Yu at Tue Mar 23 22:20:24 2021
 # assisted by CdsLibEditor
 SOFTINCLUDE $SYSTEM_CDS_LIB_DIR/cds.lib
@@ -13,5 +15,5 @@ DEFINE NCSU_TechLib_tsmc02d $CDK_DIR/lib/NCSU_TechLib_tsmc02d
 DEFINE NCSU_TechLib_tsmc03 $CDK_DIR/lib/NCSU_TechLib_tsmc03
 DEFINE NCSU_TechLib_tsmc03d $CDK_DIR/lib/NCSU_TechLib_tsmc03d
 DEFINE NCSU_TechLib_tsmc04_4M2P $CDK_DIR/lib/NCSU_TechLib_tsmc04_4M2P
-DEFINE ece425mp1 /home/koepcke2/ece425.work/ece425mp1
-DEFINE ece425mp2 /home/koepcke2/ece425.work/ece425mp2
+DEFINE ece425mp1 /home/hanyuyw2/ece425.work/ece425mp1
+DEFINE ece425mp2 /home/hanyuyw2/ece425.work/ece425mp2
