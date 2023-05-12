@@ -11,7 +11,7 @@ then
 fi
 
 module load cadence/2021-09
-#module load Synopsys_x86-64/2022
+module load Synopsys_x86-64/2021
 
 alias ic618="$SOFTPATH/cadence-2021-09/IC618/bin/virtuoso"
 export CDSHOME=$SOFTPATH/cadence-2021-09/IC618
@@ -43,4 +43,4 @@ then
     cp $CLASS/simrc .simrc
 fi
 
-#export LM_LICENSE_FILE="27005@synopsys.webstore.illinois.edu:5280@cadence.webstore.illinois.edu"
+export LM_LICENSE_FILE="27005@synopsys.webstore.illinois.edu:5280@cadence.webstore.illinois.edu"

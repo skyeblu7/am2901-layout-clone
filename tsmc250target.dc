@@ -1,0 +1,2 @@
+set target_library {vtvt/Synopsys_Libraries/libs/vtvt_tsmc250.db};
+set symbol_library {vtvt/Synopsys_Libraries/libs/vtvt_tsmc250.sdb};
