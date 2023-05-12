@@ -1,7 +1,7 @@
 #@ # 
 #@ # Running dc_shell Version R-2020.09-SP4 for linux64 -- Mar 02, 2021
-#@ # Date:   Fri May 12 00:04:09 2023
-#@ # Run by: koepcke2@fastx3-06.ews.illinois.edu
+#@ # Date:   Fri May 12 16:16:45 2023
+#@ # Run by: koepcke2@fastx3-15.ews.illinois.edu
 #@ 
 
 source /software/Synopsys-2021_x86_64/syn/R-2020.09-SP4/admin/setup/.synopsys_dc.setup
@@ -43174,124 +43174,9 @@ gui_start
 
 gui_set_pref_value -category {SelectByNamePalette} -key {ObjectType} -value {LeafCells}
 read_file -format verilog {/home/koepcke2/ece425.work/ece425mp2/controller.v}
-uplevel #0 source /home/koepcke2/ece425.work/tsmc250target.dc
-#@ # -- Starting source /home/koepcke2/ece425.work/tsmc250target.dc
-
-#@ set target_library {vtvt/Synopsys_Libraries/libs/vtvt_tsmc250.db};
-#@ set symbol_library {vtvt/Synopsys_Libraries/libs/vtvt_tsmc250.sdb};
-#@ # -- End source /home/koepcke2/ece425.work/tsmc250target.dc
-
-change_selection [get_cells controller]
-change_selection [get_ports {{b[0]}}]
-change_selection [get_ports {{a[3]}}]
-change_selection [get_ports {{b[0]}}]
-change_selection [get_ports {{a[3]}}]
-change_selection [get_ports {{b[0]}}]
-change_selection [get_ports {{select_b_hi[9]}}]
-change_selection -add [get_ports {{b[0]} oe {i[3]} ram0 {select_regfile[0]} {i[4]} ram3 {select_regfile_n[1]} {i[5]} q0 {select_regfile_n[0]} {i[6]} {select_ALU_r[0]}}]
-change_selection -add [get_ports {{i[8]} q3 {select_ALU_r[1]} {i[7]} {y_data[0]} {i[2]} {y_data[1]} {i[1]} {y_data[2]} {i[0]} {y_data[3]} {a[3]} {select_b_hi[5]}}]
-change_selection -add [get_ports {{select_a_hi[12]} {y_tri[0]} {a[2]} {select_b_hi[6]} {select_a_hi[13]} {y_tri[1]} {a[1]} {select_b_hi[7]} {select_a_hi[14]}}]
-change_selection -add [get_ports {{y_tri[2]} {a[0]} {select_b_hi[8]} {select_a_hi[15]} {y_tri[3]} {b[3]} {b[2]} {b[1]} {select_a_hi[11]} {select_b_hi[4]}}]
-change_selection -add [get_ports {{select_a_hi[10]} {select_b_hi[3]} {select_a_hi[9]} {select_b_hi[2]} {select_a_hi[8]} {select_b_hi[1]} {select_a_hi[7]}}]
-change_selection -add [get_ports {{select_b_hi[0]} {select_a_hi[6]} {f[3]} {select_a_hi[5]} {f[2]} {select_a_hi[4]} {f[1]} {select_a_hi[3]} {f[0]} {select_a_hi[2]}}]
-change_selection -add [get_ports {{c[3]} {select_a_hi[1]} {c[2]} {select_a_hi[0]} {c[1]} {select_b_hi[15]} {c[0]} {select_b_hi[14]} {p[3]} {select_b_hi[13]}}]
-change_selection -add [get_ports {{p[2]} {select_b_hi[12]} {p[1]} {select_b_hi[11]} {p[0]} {select_b_hi[10]} g_lo {select_b_hi[9]}}]
-change_selection [get_ports oe]
-change_selection [get_ports {{b[0]}}]
-change_selection -add [get_ports {{b[3]}}]
-change_selection -add [get_ports {{b[2]}}]
-change_selection -add [get_ports {{b[1]}}]
-change_selection -add [get_ports {{a[0]}}]
-change_selection -add [get_ports {{a[1]}}]
-change_selection -add [get_ports {{a[2]}}]
-change_selection -add [get_ports {{a[3]}}]
-change_selection -add [get_ports {{select_a_hi[11]}}]
-change_selection -add [get_ports {{select_b_hi[4]}}]
-change_selection -add [get_ports {{select_a_hi[10]}}]
-change_selection -add [get_ports {{select_b_hi[3]}}]
-change_selection -add [get_ports {{select_a_hi[9]}}]
-change_selection -add [get_ports {{select_b_hi[2]}}]
-change_selection -add [get_ports {{select_a_hi[8]}}]
-change_selection -add [get_ports {{select_b_hi[1]}}]
-change_selection -add [get_ports {{select_a_hi[7]}}]
-change_selection -add [get_ports {{select_b_hi[0]}}]
-change_selection -add [get_ports {{select_a_hi[6]}}]
-change_selection -add [get_ports {{select_a_hi[5]}}]
-change_selection -add [get_ports {{select_a_hi[4]}}]
-change_selection -add [get_ports {{select_a_hi[3]}}]
-change_selection -add [get_ports {{select_a_hi[2]}}]
-change_selection -add [get_ports {{select_a_hi[1]}}]
-change_selection -add [get_ports {{select_a_hi[0]}}]
-change_selection -add [get_ports {{select_b_hi[15]}}]
-change_selection -add [get_ports {{select_b_hi[14]}}]
-change_selection -add [get_ports {{select_b_hi[13]}}]
-change_selection -add [get_ports {{select_b_hi[12]}}]
-change_selection -add [get_ports {{select_b_hi[11]}}]
-change_selection -add [get_ports {{select_b_hi[10]}}]
-change_selection -add [get_ports {{select_b_hi[9]}}]
-set_max_delay 275 -rise  -to { {select_b_hi[10]} {select_b_hi[11]} {select_b_hi[12]} {select_b_hi[13]} {select_b_hi[14]} {select_b_hi[15]} {select_a_hi[0]} {select_a_hi[1]} {select_a_hi[2]} {select_a_hi[3]} {select_a_hi[4]} {select_a_hi[5]} {select_a_hi[6]} {select_b_hi[0]} {select_a_hi[7]} {select_b_hi[1]} {select_a_hi[8]} {select_b_hi[2]} {select_a_hi[9]} {select_b_hi[3]} {select_a_hi[10]} {select_b_hi[4]} {select_a_hi[11]} {select_b_hi[9]} } -from { {a[2]} {a[1]} {a[0]} {b[1]} {b[2]} {b[3]} {b[0]} {a[3]} }  -group_path decoder
-set_max_delay 275 -fall  -to { {select_b_hi[10]} {select_b_hi[11]} {select_b_hi[12]} {select_b_hi[13]} {select_b_hi[14]} {select_b_hi[15]} {select_a_hi[0]} {select_a_hi[1]} {select_a_hi[2]} {select_a_hi[3]} {select_a_hi[4]} {select_a_hi[5]} {select_a_hi[6]} {select_b_hi[0]} {select_a_hi[7]} {select_b_hi[1]} {select_a_hi[8]} {select_b_hi[2]} {select_a_hi[9]} {select_b_hi[3]} {select_a_hi[10]} {select_b_hi[4]} {select_a_hi[11]} {select_b_hi[9]} } -from { {a[2]} {a[1]} {a[0]} {b[1]} {b[2]} {b[3]} {b[0]} {a[3]} }  -group_path decoder
-set_max_delay 275 -fall  -to { {select_b_hi[10]} {select_b_hi[11]} {select_b_hi[12]} {select_b_hi[13]} {select_b_hi[14]} {select_b_hi[15]} {select_a_hi[0]} {select_a_hi[1]} {select_a_hi[2]} {select_a_hi[3]} {select_a_hi[4]} {select_a_hi[5]} {select_a_hi[6]} {select_b_hi[0]} {select_a_hi[7]} {select_b_hi[1]} {select_a_hi[8]} {select_b_hi[2]} {select_a_hi[9]} {select_b_hi[3]} {select_a_hi[10]} {select_b_hi[4]} {select_a_hi[11]} {select_b_hi[9]} } -from { {a[2]} {a[1]} {a[0]} {b[1]} {b[2]} {b[3]} {b[0]} {a[3]} }  -group_path decoder
-set_max_delay 275 -fall  -to { {select_b_hi[10]} {select_b_hi[11]} {select_b_hi[12]} {select_b_hi[13]} {select_b_hi[14]} {select_b_hi[15]} {select_a_hi[0]} {select_a_hi[1]} {select_a_hi[2]} {select_a_hi[3]} {select_a_hi[4]} {select_a_hi[5]} {select_a_hi[6]} {select_b_hi[0]} {select_a_hi[7]} {select_b_hi[1]} {select_a_hi[8]} {select_b_hi[2]} {select_a_hi[9]} {select_b_hi[3]} {select_a_hi[10]} {select_b_hi[4]} {select_a_hi[11]} {select_b_hi[9]} } -from { {a[2]} {a[1]} {a[0]} {b[1]} {b[2]} {b[3]} {b[0]} {a[3]} }  -group_path decoder
-change_selection -remove [get_ports {{b[1]}}]
-change_selection -remove [get_ports {{b[2]}}]
-change_selection -remove [get_ports {{b[3]}}]
-change_selection -remove [get_ports {{a[0]}}]
-change_selection -remove [get_ports {{a[1]}}]
-change_selection -remove [get_ports {{a[2]}}]
-change_selection -remove [get_ports {{a[3]}}]
-change_selection -remove [get_ports {{b[0]}}]
-compile_ultra
+read_file -format verilog {/home/koepcke2/ece425.work/controller_synth.v}
 change_selection [get_cells controller]
 gui_set_setting -window [gui_get_current_window -types Schematic -mru] -setting schematic:background_color -value black
 gui_set_setting -window [gui_get_current_window -types Schematic -mru] -setting zoomFitFactor -value 0.0
-uplevel #0 { report_area }
-change_selection -add [get_ports {{select_b_hi[0]}}]
-change_selection -add [get_ports {{select_b_hi[1]}}]
-change_selection -add [get_ports {{select_b_hi[2]}}]
-change_selection -add [get_ports {{select_b_hi[3]}}]
-change_selection -add [get_ports {{select_b_hi[4]}}]
-change_selection -add [get_ports {{select_b_hi[5]}}]
-change_selection -add [get_ports {{select_b_hi[6]}}]
-change_selection -add [get_ports {{select_b_hi[7]}}]
-change_selection -add [get_ports {{select_b_hi[8]}}]
-change_selection -add [get_ports ovr]
-change_selection -add [get_ports {{select_b_hi[10]}}]
-change_selection -add [get_ports {{select_b_hi[9]}}]
-change_selection -remove [get_ports ovr]
-change_selection -add [get_ports {{select_b_hi[11]}}]
-change_selection -add [get_ports {{select_b_hi[12]}}]
-change_selection -add [get_ports {{select_b_hi[13]}}]
-change_selection -add [get_ports {{select_b_hi[14]}}]
-change_selection -add [get_ports {{select_b_hi[15]}}]
-change_selection -add [get_ports {{select_a_hi[0]}}]
-change_selection -add [get_ports {{select_a_hi[1]}}]
-change_selection -add [get_ports {{select_a_hi[2]}}]
-change_selection -add [get_ports {{select_a_hi[3]}}]
-change_selection -add [get_ports {{select_a_hi[4]}}]
-change_selection -add [get_ports {{select_a_hi[5]}}]
-change_selection -add [get_ports {{select_a_hi[6]}}]
-change_selection -add [get_ports {{select_a_hi[7]}}]
-change_selection -add [get_ports {{select_a_hi[8]}}]
-change_selection -add [get_ports {{select_a_hi[9]}}]
-change_selection -add [get_ports {{select_a_hi[10]}}]
-change_selection -add [get_ports {{select_a_hi[11]}}]
-change_selection -add [get_ports {{select_a_hi[12]}}]
-change_selection -add [get_ports {{select_a_hi[13]}}]
-change_selection -add [get_ports {{select_a_hi[14]}}]
-change_selection -add [get_ports {{select_a_hi[15]}}]
-change_selection -add [get_ports {{b[0]}}]
-change_selection -add [get_ports {{b[1]}}]
-change_selection -add [get_ports {{b[2]}}]
-change_selection -add [get_ports {{b[3]}}]
-change_selection -add [get_ports {{a[0]}}]
-change_selection -add [get_ports {{a[1]}}]
-change_selection -add [get_ports {{a[2]}}]
-change_selection -add [get_ports {{a[3]}}]
-set_max_delay 325 -rise  -to { {select_a_hi[14]} {select_a_hi[13]} {select_a_hi[12]} {select_a_hi[11]} {select_a_hi[10]} {select_a_hi[9]} {select_a_hi[8]} {select_a_hi[7]} {select_a_hi[6]} {select_a_hi[5]} {select_a_hi[4]} {select_a_hi[3]} {select_a_hi[2]} {select_a_hi[1]} {select_a_hi[0]} {select_b_hi[15]} {select_b_hi[14]} {select_b_hi[13]} {select_b_hi[12]} {select_b_hi[11]} {select_b_hi[9]} {select_b_hi[10]} {select_b_hi[8]} {select_b_hi[7]} {select_b_hi[6]} {select_b_hi[5]} {select_b_hi[4]} {select_b_hi[3]} {select_b_hi[2]} {select_b_hi[1]} {select_b_hi[0]} {select_a_hi[15]} controller } -from { {a[2]} {a[1]} {a[0]} {b[3]} {b[2]} {b[1]} {b[0]} {a[3]} }  -group_path decoder
-set_max_delay 325 -fall  -to { {select_a_hi[14]} {select_a_hi[13]} {select_a_hi[12]} {select_a_hi[11]} {select_a_hi[10]} {select_a_hi[9]} {select_a_hi[8]} {select_a_hi[7]} {select_a_hi[6]} {select_a_hi[5]} {select_a_hi[4]} {select_a_hi[3]} {select_a_hi[2]} {select_a_hi[1]} {select_a_hi[0]} {select_b_hi[15]} {select_b_hi[14]} {select_b_hi[13]} {select_b_hi[12]} {select_b_hi[11]} {select_b_hi[9]} {select_b_hi[10]} {select_b_hi[8]} {select_b_hi[7]} {select_b_hi[6]} {select_b_hi[5]} {select_b_hi[4]} {select_b_hi[3]} {select_b_hi[2]} {select_b_hi[1]} {select_b_hi[0]} {select_a_hi[15]} controller } -from { {a[2]} {a[1]} {a[0]} {b[3]} {b[2]} {b[1]} {b[0]} {a[3]} }  -group_path decoder
-set_max_delay 325 -fall  -to { {select_a_hi[14]} {select_a_hi[13]} {select_a_hi[12]} {select_a_hi[11]} {select_a_hi[10]} {select_a_hi[9]} {select_a_hi[8]} {select_a_hi[7]} {select_a_hi[6]} {select_a_hi[5]} {select_a_hi[4]} {select_a_hi[3]} {select_a_hi[2]} {select_a_hi[1]} {select_a_hi[0]} {select_b_hi[15]} {select_b_hi[14]} {select_b_hi[13]} {select_b_hi[12]} {select_b_hi[11]} {select_b_hi[9]} {select_b_hi[10]} {select_b_hi[8]} {select_b_hi[7]} {select_b_hi[6]} {select_b_hi[5]} {select_b_hi[4]} {select_b_hi[3]} {select_b_hi[2]} {select_b_hi[1]} {select_b_hi[0]} {select_a_hi[15]} controller } -from { {a[2]} {a[1]} {a[0]} {b[3]} {b[2]} {b[1]} {b[0]} {a[3]} }  -group_path decoder
-set_max_delay 325 -fall  -to { {select_a_hi[14]} {select_a_hi[13]} {select_a_hi[12]} {select_a_hi[11]} {select_a_hi[10]} {select_a_hi[9]} {select_a_hi[8]} {select_a_hi[7]} {select_a_hi[6]} {select_a_hi[5]} {select_a_hi[4]} {select_a_hi[3]} {select_a_hi[2]} {select_a_hi[1]} {select_a_hi[0]} {select_b_hi[15]} {select_b_hi[14]} {select_b_hi[13]} {select_b_hi[12]} {select_b_hi[11]} {select_b_hi[9]} {select_b_hi[10]} {select_b_hi[8]} {select_b_hi[7]} {select_b_hi[6]} {select_b_hi[5]} {select_b_hi[4]} {select_b_hi[3]} {select_b_hi[2]} {select_b_hi[1]} {select_b_hi[0]} {select_a_hi[15]} controller } -from { {a[2]} {a[1]} {a[0]} {b[3]} {b[2]} {b[1]} {b[0]} {a[3]} }  -group_path decoder
-compile_ultra
-uplevel #0 { report_area }
-write -hierarchy -format verilog -output /home/koepcke2/ece425.work/controller_synth.v
+change_selection [get_cells controller]
+change_selection [get_cells controller]

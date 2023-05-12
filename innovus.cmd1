@@ -1,0 +1,165 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Fri May 12 14:29:39 2023                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v21.10-p004_1 (64bit) 05/18/2021 11:58 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: NanoRoute 21.10-p004_1 NR210506-1544/21_10-UB (database version 18.20.544) {superthreading v2.14}
+#@(#)CDS: AAE 21.10-p006 (64bit) 05/18/2021 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: CTE 21.10-p004_1 () May 13 2021 20:04:41 ( )
+#@(#)CDS: SYNTECH 21.10-b006_1 () Apr 18 2021 22:44:07 ( )
+#@(#)CDS: CPE v21.10-p004
+#@(#)CDS: IQuantus/TQuantus 20.1.2-s510 (64bit) Sun Apr 18 10:29:16 PDT 2021 (Linux 2.6.32-431.11.2.el6.x86_64)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+getVersion
+getVersion
+getVersion
+win
+setImportMode -treatUndefinedCellAsBbox 0 -keepEmptyModule 1 -useLefDef56 1
+init_design
+defIn am2901.def
+fit
+zoomBox -125.70000 -31.66000 156.01000 220.53000
+pan 38.63000 96.23000
+setDrawView fplan
+uiSetTool ptnPinBlk
+createPinBlkg -area 49.23000 -2.50000 53.24000 196.48000
+uiSetTool layerBlk
+createRouteBlk -box 48.14000 -6.51000 56.52000 199.40000
+deleteFPObject LayerShape (4812,0,5208,19488)
+uiSetTool ptnPinBlk
+createPinBlkg -area 4.40000 -1.77000 8.05000 196.84000
+zoomBox -49.55000 11.28000 153.99000 193.49000
+zoomSelected
+undo
+undo
+undo
+undo
+viewLast
+viewLast
+redraw
+redraw
+redraw
+uiSetTool select
+selectPtnPinBlk 49.2 -2.52 53.22 196.5 defPtnPinBlkName 2
+deleteSelectedFromFPlan
+zoomBox -74.79000 -5.02000 128.76000 177.20000
+zoomBox -56.78000 4.14000 116.24000 159.03000
+zoomBox -40.00000 11.73000 107.07000 143.39000
+zoomBox -15.35000 23.13000 90.92000 118.26000
+zoomBox 9.29000 35.76000 74.55000 94.18000
+zoomBox 15.60000 38.76000 71.07000 88.42000
+zoomBox 20.96000 41.31000 68.11000 83.52000
+zoomBox -9.23000 28.37000 81.12000 109.25000
+zoomBox -68.53000 12.27000 104.57000 167.23000
+zoomBox -116.19000 -0.20000 123.40000 214.28000
+zoomBox -182.86000 -5.21000 148.76000 291.66000
+pan 36.90000 98.71000
+pan 9.01000 99.57000
+getPreference InstFlightLine
+gui_select -rect {47.09000 204.15000 154.34000 -16.79000}
+zoomBox -101.88000 -31.01000 180.00000 221.33000
+deselectAll
+gui_select -rect {154.47000 -12.42000 55.29000 212.21000}
+gui_select -rect {66.23000 198.72000 53.10000 -10.96000}
+deselectAll
+deselectAll
+gui_select -rect {40.70000 213.67000 155.20000 -18.98000}
+gui_select -rect {66.59000 209.66000 150.10000 165.54000}
+deselectAll
+deselectAll
+gui_select -rect {-10.35000 9.46000 3.14000 -18.25000}
+zoomBox -11.82000 56.41000 161.29000 211.38000
+zoomBox 43.47000 110.15000 149.79000 205.33000
+zoomBox 77.66000 143.07000 142.96000 201.53000
+zoomBox 103.44000 166.65000 137.53000 197.17000
+zoomBox 114.00000 176.38000 134.96000 195.14000
+zoomBox 116.53000 178.70000 134.35000 194.65000
+deselectAll
+selectObject IO_Pin {c[3]}
+deselectAll
+selectObject IO_Pin {f[3]}
+deselectAll
+selectObject IO_Pin {f[3]}
+zoomBox 103.02000 167.00000 137.19000 197.59000
+zoomBox 76.98000 144.77000 142.44000 203.37000
+zoomBox 27.26000 108.99000 152.66000 221.25000
+zoomBox -67.85000 40.73000 172.39000 255.80000
+pan -33.25000 79.99000
+deselectAll
+gui_select -rect {58.96000 197.37000 63.00000 195.51000}
+zoomBox -130.06000 -19.83000 152.58000 233.19000
+pan 14.99000 87.56000
+zoomBox -203.07000 -175.79000 257.17000 236.22000
+zoomBox -507.30000 -432.53000 374.40000 356.78000
+zoomBox -347.81000 -272.23000 289.23000 298.06000
+zoomBox -284.15000 -209.44000 257.34000 275.31000
+zoomBox -230.04000 -156.06000 230.23000 255.98000
+zoomBox -145.78000 -66.01000 186.77000 231.69000
+gui_select -rect {65.45000 202.44000 50.82000 -10.52000}
+deselectAll
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer metal5 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe -nets {vdd vss} -layer metal1 -direction horizontal -width 1 -spacing 0.36 -set_to_set_distance 100 -start_from left -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit metal5 -padcore_ring_bottom_layer_limit metal1 -block_ring_top_layer_limit metal5 -block_ring_bottom_layer_limit metal1 -use_wire_group 0 -snap_wire_center_to_grid None
+setSrouteMode -viaConnectToShape { noshape }
+sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { metal1(1) metal5(5) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { metal1(1) metal5(5) } -nets { vdd vss } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { metal1(1) metal5(5) }
+zoomBox -121.97000 -40.98000 160.70000 212.07000
+zoomBox -101.78000 -19.70000 138.49000 195.39000
+zoomBox -70.04000 13.76000 103.56000 169.17000
+zoomBox -57.44000 26.73000 90.12000 158.83000
+zoomBox -31.86000 45.32000 74.76000 140.77000
+zoomBox -13.38000 58.74000 63.66000 127.71000
+pan -0.50000 41.82000
+pan -0.80000 13.82000
+pan -2.09000 10.83000
+pan 2.49000 51.19000
+pan 1.10000 84.58000
+pan 1.00000 121.75000
+pan -0.60000 154.14000
+zoomBox -7.04000 153.89000 48.63000 203.73000
+zoomBox -19.28000 140.03000 71.39000 221.20000
+zoomBox -25.59000 135.00000 81.08000 230.49000
+zoomBox -33.27000 129.20000 92.23000 241.55000
+pan 19.32000 91.20000
+zoomBox -29.54000 44.80000 118.11000 176.98000
+pan -5.92000 35.95000
+setDesignMode -topRoutingLayer M3
+setPlaceMode -fp false
+place_design
+setNanoRouteMode -quiet -routeTopRoutingLayer 5
+setNanoRouteMode -quiet -routeBottomRoutingLayer 1
+setNanoRouteMode -quiet -drouteEndIteration 1
+setNanoRouteMode -quiet -routeWithTimingDriven false
+setNanoRouteMode -quiet -routeWithSiDriven false
+routeDesign -globalDetail
+zoomBox -78.13000 -21.17000 126.23000 161.78000
+pan 53.67000 92.39000
+zoomBox -73.00000 -19.65000 209.85000 233.56000
+pan 20.13000 76.41000
+pan -21.22000 -28.98000
+pan -5.12000 47.49000
+summaryReport -noHtml -outfile summaryReport.rpt
+getFillerMode -quiet
+addFiller -cell filler -prefix FILLER
+streamOut controller.gds -mapFile vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map -libName DesignLib -units 100 -mode ALL

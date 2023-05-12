@@ -1,0 +1,515 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v21.10-p004_1, built Tue May 18 11:58:29 PDT 2021
+Options:	
+Date:		Fri May 12 13:25:24 2023
+Host:		fastx3-15.ews.illinois.edu (x86_64 w/Linux 4.18.0-425.10.1.el8_7.x86_64) (1core*8cpus*Intel(R) Xeon(R) Silver 4216 CPU @ 2.10GHz 22528KB)
+OS:		AlmaLinux release 8.7 (Stone Smilodon)
+
+License:
+		invs	Innovus Implementation System	21.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (31 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> getVersion
+<CMD> getVersion
+<CMD> getVersion
+[INFO] Loading PVS 21.10 fill procedures
+<CMD> win
+<CMD> setImportMode -treatUndefinedCellAsBbox 0 -keepEmptyModule 1 -useLefDef56 1
+<CMD> init_design
+
+Loading LEF file vtvt/vtvt_tsmc250_lef/vtvt_tsmc250.lef ...
+**WARN: (IMPLF-108):	There is no overlap layer defined in any LEF file
+so you are unable to create rectilinear partition in a hierarchical flow.
+Set DBUPerIGU to M2 pitch 108.
+
+viaInitial starts at Fri May 12 13:28:34 2023
+**WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURN1 GENERATE.
+Type 'man IMPPP-557' for more detail.
+**WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURN2 GENERATE.
+Type 'man IMPPP-557' for more detail.
+**WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURN3 GENERATE.
+Type 'man IMPPP-557' for more detail.
+**WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURN4 GENERATE.
+Type 'man IMPPP-557' for more detail.
+**WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURN5 GENERATE.
+Type 'man IMPPP-557' for more detail.
+viaInitial ends at Fri May 12 13:28:34 2023
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+*** End library_loading (cpu=0.00min, real=0.00min, mem=0.0M, fe_cpu=0.49min, fe_real=3.17min, fe_mem=825.9M) ***
+#% Begin Load netlist data ... (date=05/12 13:28:34, mem=874.2M)
+*** Begin netlist parsing (mem=825.9M) ***
+Created 0 new cells from 0 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist 'controller_synth.v'
+
+*** Memory Usage v#1 (Current mem = 826.926M, initial mem = 315.102M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=826.9M) ***
+#% End Load netlist data ... (date=05/12 13:28:34, total cpu=0:00:00.0, real=0:00:00.0, peak res=878.3M, current mem=878.3M)
+Set top cell to controller.
+Hooked 0 DB cells to tlib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell controller ...
+*** Netlist is unique.
+** info: there are 94 modules.
+** info: there are 111 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 874.340M, initial mem = 315.102M) ***
+*info: set bottom ioPad orient R0
+**WARN: (IMPFP-3961):	The techSite 'CornerSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'IOSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+Generated pitch 1.62 in metal5 is different from 2.16 defined in technology file in preferred direction.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Default Input Pin Transition as 0.1 ps.
+**WARN: (IMPSYT-7328):	The design has been initialized in physical-only mode because the init_mmmc_file global variable was not defined. Timing analysis will not be possible within this session. You can only use commands that do not depend on timing data. If you need to use timing, you need to restart with an init_mmmc_file to define the timing setup, or you can save this design and use restoreDesign -mmmc_file <viewDef.tcl> to add the timing setup information.
+Extraction setup Started 
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPLF-108            1  There is no overlap layer defined in any...
+WARNING   IMPFP-3961           2  The techSite '%s' has no related standar...
+WARNING   IMPSYT-7328          1  The design has been initialized in physi...
+WARNING   IMPPP-557            5  A single-layer VIARULE GENERATE for turn...
+*** Message Summary: 9 warning(s), 0 error(s)
+
+<CMD> defIn am2901.def
+Reading DEF file 'am2901.def', current time is Fri May 12 13:29:00 2023 ...
+--- DIVIDERCHAR '/'
+**WARN: (IMPDF-64):	UnitsPerDBU is not unity (you may have rounding problems).
+--- UnitsPerDBU = 10.0000
+**WARN: (IMPDF-212):	Instance I1 is not found in db and can't be
+created as a physical instance because the cell 'bitslice' of this
+instance is not found in db. Make sure all the lef files/OA database
+are specified and loaded properly
+**WARN: (IMPDF-212):	Instance I0 is not found in db and can't be
+created as a physical instance because the cell 'bitslice' of this
+instance is not found in db. Make sure all the lef files/OA database
+are specified and loaded properly
+**WARN: (IMPDF-212):	Instance I2 is not found in db and can't be
+created as a physical instance because the cell 'bitslice' of this
+instance is not found in db. Make sure all the lef files/OA database
+are specified and loaded properly
+**WARN: (IMPDF-212):	Instance I3 is not found in db and can't be
+created as a physical instance because the cell 'bitslice' of this
+instance is not found in db. Make sure all the lef files/OA database
+are specified and loaded properly
+**WARN: (IMPDF-244):	Pin 'y[3]' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (IMPDF-248):	The direction of pin 'f[0]' is inconsistent with
+        netlist or timing library (INPUT in db)
+**WARN: (IMPDF-248):	The direction of pin 'f[1]' is inconsistent with
+        netlist or timing library (INPUT in db)
+**WARN: (IMPDF-248):	The direction of pin 'f[2]' is inconsistent with
+        netlist or timing library (INPUT in db)
+**WARN: (IMPDF-248):	The direction of pin 'f[3]' is inconsistent with
+        netlist or timing library (INPUT in db)
+**WARN: (IMPDF-244):	Pin 'q3_out' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (IMPDF-244):	Pin 'q0_out' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (IMPDF-244):	Pin 'f0_in' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (IMPDF-244):	Pin 'q0_in' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (IMPDF-244):	Pin 'q3_in' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (IMPDF-244):	Pin 'f3_in' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (IMPDF-248):	The direction of pin 'inv_r' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (IMPDF-248):	The direction of pin 'inv_s' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (IMPDF-248):	The direction of pin 'sel_f0' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (IMPDF-248):	The direction of pin 'not_sel_f0' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (IMPDF-248):	The direction of pin 'sel_f1' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (IMPDF-248):	The direction of pin 'not_sel_f1' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (IMPDF-248):	The direction of pin 'select_q_reg_n[1]' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (IMPDF-248):	The direction of pin 'select_q_reg[1]' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (IMPDF-248):	The direction of pin 'select_q_reg_n[0]' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (IMPDF-248):	The direction of pin 'select_q_reg[0]' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (IMPDF-248):	The direction of pin 'select_regfile_n[1]' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (IMPDF-248):	The direction of pin 'select_regfile[1]' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (IMPDF-248):	The direction of pin 'select_regfile_n[0]' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (IMPDF-248):	The direction of pin 'select_regfile[0]' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (IMPDF-248):	The direction of pin 'select_ALU_r_n[1]' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (IMPDF-248):	The direction of pin 'select_ALU_r[1]' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (EMS-27):	Message (IMPDF-248) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+**WARN: (IMPDF-244):	Pin 'y[2]' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (IMPDF-244):	Pin 'cp' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (IMPDF-244):	Pin 'cp_n' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (IMPDF-244):	Pin 'vdd!' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (IMPDF-244):	Pin 'gnd!' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (IMPDF-244):	Pin 'y[1]' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (IMPDF-244):	Pin 'y[0]' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (IMPDF-244):	Pin 'd[3]' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (IMPDF-244):	Pin 'd[2]' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (IMPDF-244):	Pin 'd[1]' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (IMPDF-244):	Pin 'd[0]' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (IMPDF-244):	Pin 'cin' is not created because it's not in the netlist and also not a P/G pin.
+Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+Extracting macro/IO cell pins and blockage ...... 
+Pin and blockage extraction finished
+**WARN: (IMPDF-147):	Net 'y[3]' is not found in the database and can't be created. The data on the net in def file is discarded. defIn will continue. It may cause problems late in the flow. Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (IMPDF-147):	Net 'q3_out' is not found in the database and can't be created. The data on the net in def file is discarded. defIn will continue. It may cause problems late in the flow. Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (IMPDF-147):	Net 'q0_out' is not found in the database and can't be created. The data on the net in def file is discarded. defIn will continue. It may cause problems late in the flow. Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (IMPDF-147):	Net 'f0_in' is not found in the database and can't be created. The data on the net in def file is discarded. defIn will continue. It may cause problems late in the flow. Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (IMPDF-147):	Net 'q0_in' is not found in the database and can't be created. The data on the net in def file is discarded. defIn will continue. It may cause problems late in the flow. Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (IMPDF-147):	Net 'q3_in' is not found in the database and can't be created. The data on the net in def file is discarded. defIn will continue. It may cause problems late in the flow. Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (IMPDF-147):	Net 'f3_in' is not found in the database and can't be created. The data on the net in def file is discarded. defIn will continue. It may cause problems late in the flow. Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (IMPDF-147):	Net 'y[2]' is not found in the database and can't be created. The data on the net in def file is discarded. defIn will continue. It may cause problems late in the flow. Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (IMPDF-147):	Net 'cp' is not found in the database and can't be created. The data on the net in def file is discarded. defIn will continue. It may cause problems late in the flow. Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (IMPDF-147):	Net 'cp_n' is not found in the database and can't be created. The data on the net in def file is discarded. defIn will continue. It may cause problems late in the flow. Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (IMPDF-147):	Net 'vdd!' is not found in the database and can't be created. The data on the net in def file is discarded. defIn will continue. It may cause problems late in the flow. Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (IMPDF-147):	Net 'gnd!' is not found in the database and can't be created. The data on the net in def file is discarded. defIn will continue. It may cause problems late in the flow. Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (IMPDF-147):	Net 'y[1]' is not found in the database and can't be created. The data on the net in def file is discarded. defIn will continue. It may cause problems late in the flow. Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (IMPDF-147):	Net 'y[0]' is not found in the database and can't be created. The data on the net in def file is discarded. defIn will continue. It may cause problems late in the flow. Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (IMPDF-147):	Net 'd[3]' is not found in the database and can't be created. The data on the net in def file is discarded. defIn will continue. It may cause problems late in the flow. Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (IMPDF-147):	Net 'd[2]' is not found in the database and can't be created. The data on the net in def file is discarded. defIn will continue. It may cause problems late in the flow. Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (IMPDF-147):	Net 'd[1]' is not found in the database and can't be created. The data on the net in def file is discarded. defIn will continue. It may cause problems late in the flow. Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (IMPDF-147):	Net 'd[0]' is not found in the database and can't be created. The data on the net in def file is discarded. defIn will continue. It may cause problems late in the flow. Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (IMPDF-147):	Net 'cin' is not found in the database and can't be created. The data on the net in def file is discarded. defIn will continue. It may cause problems late in the flow. Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+DEF file 'am2901.def' is parsed, current time is Fri May 12 13:29:00 2023.
+<CMD> fit
+<CMD> setDrawView fplan
+<CMD> uiSetTool layerBlk
+<CMD> createRouteBlk -box 2.41000 2.55000 104.23000 43.25000
+<CMD> undo
+**ERROR: (IMPSYT-6852):	No more action to undo.
+<CMD> deleteFPObject LayerShape (240,252,10422,4326)
+<CMD> createRouteBlk -box -0.33000 -19.24000 108.19000 0.88000
+<CMD> deleteFPObject LayerShape (0,0,10710,90)
+<CMD> zoomBox -15.14000 -57.90000 147.94000 88.09000
+<CMD> zoomBox -28.51000 -95.78000 197.21000 106.29000
+<CMD> zoomBox -40.63000 -158.15000 271.80000 121.54000
+<CMD> zoomBox -53.25000 -193.81000 314.31000 135.23000
+<CMD> zoomBox -46.48000 -159.79000 265.95000 119.90000
+<CMD> zoomBox -40.72000 -130.87000 224.85000 106.87000
+<CMD> zoomBox -35.82000 -106.29000 189.91000 95.79000
+<CMD> zoomBox -31.27000 -85.31000 160.61000 86.46000
+<CMD> zoomBox -22.12000 -53.01000 116.52000 71.10000
+<CMD> zoomBox -15.50000 -29.67000 84.67000 60.00000
+<CMD> zoomBox -26.71000 -34.73000 91.14000 70.77000
+<CMD> pan 25.16000 -15.04000
+<CMD> zoomBox -12.53000 -47.83000 126.12000 76.29000
+<CMD> pan -7.53000 -34.58000
+<CMD> createRouteBlk -box -1.05000 -18.77000 111.24000 16.38000
+<CMD> getPreference InstFlightLine
+**ERROR: (IMPSYT-6000):	No Object Selected.
+<CMD> zoomBox -35.73000 -64.43000 127.39000 81.60000
+<CMD> createRouteBlk -box 19.98000 51.85000 64.30000 63.66000
+**ERROR: (IMPFP-122):	The specified box is outside the die box.
+<CMD> zoomBox -67.59000 -113.14000 158.19000 88.98000
+<CMD> createRouteBlk -box -32.54000 -38.66000 147.68000 55.39000
+<CMD> deleteFPObject LayerShape (0,0,10710,4536)
+**ERROR: (IMPSYT-6000):	No Object Selected.
+<CMD> deleteFPObject LayerShape (0,0,10710,1638)
+<CMD> createRouteBlk -box -7.71000 -9.45000 4.26000 50.43000
+<CMD> zoomBox -56.16000 -74.24000 106.97000 71.80000
+<CMD> zoomBox -43.90000 -45.59000 73.97000 59.93000
+<CMD> zoomBox -31.67000 -25.71000 53.49000 50.53000
+<CMD> zoomBox -26.61000 -18.01000 45.79000 46.80000
+<CMD> zoomBox -23.72000 -11.93000 37.82000 43.16000
+<CMD> zoomBox -20.46000 -6.76000 31.85000 40.07000
+<CMD> zoomBox -17.70000 -2.37000 26.77000 37.44000
+<CMD> pan -1.15000 32.70000
+<CMD> zoomBox -24.99000 12.59000 36.56000 67.69000
+<CMD> zoomBox -28.90000 11.06000 43.51000 75.88000
+<CMD> pan 0.47000 6.42000
+<CMD> zoomBox -18.18000 -11.02000 19.62000 22.82000
+<CMD> deleteFPObject LayerShape (0,0,426,4536)
+<CMD> zoomBox -22.82000 -12.29000 21.65000 27.52000
+<CMD> zoomBox -28.28000 -13.79000 24.04000 33.05000
+<CMD> zoomBox -34.71000 -15.55000 26.85000 39.56000
+<CMD> pan 24.61000 20.19000
+<CMD> zoomBox -16.04000 -18.30000 56.39000 46.54000
+<CMD> zoomBox -23.03000 -22.75000 62.19000 53.54000
+<CMD> zoomBox -46.88000 -33.83000 71.09000 71.78000
+<CMD> pan 49.30000 8.93000
+<CMD> pan -19.84000 -43.27000
+<CMD> createRouteBlk -box -4.30000 -4.53000 3.18000 47.21000
+**ERROR: (IMPSYT-6000):	No Object Selected.
+<CMD> deleteFPObject LayerShape (0,0,318,4536)
+**ERROR: (IMPSYT-6000):	No Object Selected.
+<CMD> createRouteBlk -box -2.62000 19.74000 -1.85000 20.35000
+**ERROR: (IMPFP-122):	The specified box is outside the die box.
+<CMD> createRouteBlk -box -1.85000 -12.92000 27.45000 19.74000
+<CMD> deleteFPObject LayerShape (0,0,2742,1974)
+<CMD> highlight -index 1
+<CMD> createRouteBlk -box -11.32000 32.25000 1.81000 48.89000
+<CMD> deleteFPObject LayerShape (0,3222,180,4536)
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer metal5 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe will allow jog to connect padcore ring and block ring.
+
+Stripes will stop at the boundary of the specified area.
+When breaking rings, the power planner will consider the existence of blocks.
+Stripes will not extend to closest target.
+The power planner will set stripe antenna targets to none (no trimming allowed).
+Stripes will not be created over regions without power planning wires.
+The entire stripe set will break at the domain if one of the nets is not in the domain.
+addStripe will break automatically at non-default domains when generating global stripes over the core area or default domain.
+Offset for stripe breaking is set to 0.
+<CMD> addStripe -nets {vdd vss} -layer metal1 -direction horizontal -width 1 -spacing 0.48 -set_to_set_distance 100 -start_from left -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit metal5 -padcore_ring_bottom_layer_limit metal1 -block_ring_top_layer_limit metal5 -block_ring_bottom_layer_limit metal1 -use_wire_group 0 -snap_wire_center_to_grid None
+
+**WARN: (IMPPP-151):	-width (1.000000) is not multiple of manufacturing grid (0.060000), setting to 1.020000.
+**WARN: (IMPPP-152):	-width (1.000000) is not an even multiple of manufacturing grid (0.060000), setting to 1.080000.
+**WARN: (IMPPP-151):	-merge_stripes_value (-1.000000) is not multiple of manufacturing grid (0.060000), setting to -0.960000.
+**WARN: (IMPPP-151):	-set_to_set_distance (100.000000) is not multiple of manufacturing grid (0.060000), setting to 100.020000.
+Initialize fgc environment(mem: 1189.1M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1189.1M)
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1189.1M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1189.1M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1189.1M)
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  NONE
+The core ring for vdd is incomplete. The core ring will not be used as a boundary for stripes. In this situation, the power planner will generate stripes only within the core area.
+The core ring for vss is incomplete. The core ring will not be used as a boundary for stripes. In this situation, the power planner will generate stripes only within the core area.
+Stripe generation is complete.
+vias are now being generated.
+addStripe created 2 wires.
+ViaGen created 0 via, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+| metal1 |        2       |       NA       |
++--------+----------------+----------------+
+<CMD> setSrouteMode -viaConnectToShape { noshape }
+<CMD> sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { metal1(1) metal5(5) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { metal1(1) metal5(5) } -nets { vdd vss } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { metal1(1) metal5(5) }
+*** Begin SPECIAL ROUTE on Fri May 12 13:48:39 2023 ***
+SPECIAL ROUTE ran on directory: /home/koepcke2/ece425.work
+SPECIAL ROUTE ran on machine: fastx3-15.ews.illinois.edu (Linux 4.18.0-425.10.1.el8_7.x86_64 Xeon 2.10Ghz)
+
+Begin option processing ...
+srouteConnectPowerBump set to false
+routeSelectNet set to "vdd vss"
+routeSpecial set to true
+srouteBlockPin set to "useLef"
+srouteBottomLayerLimit set to 1
+srouteBottomTargetLayerLimit set to 1
+srouteConnectConverterPin set to false
+srouteCrossoverViaBottomLayer set to 1
+srouteCrossoverViaTopLayer set to 5
+srouteFloatingStripeTarget set to "blockring padring ring stripe ringpin blockpin followpin"
+srouteFollowCorePinEnd set to 3
+srouteJogControl set to "preferWithChanges differentLayer"
+srouteNoViaOnWireShape set to "padring ring stripe blockring blockpin coverpin blockwire corewire followpin iowire"
+sroutePadPinAllPorts set to true
+sroutePreserveExistingRoutes set to true
+srouteRoutePowerBarPortOnBothDir set to true
+srouteStopBlockPin set to "nearestTarget"
+srouteTopLayerLimit set to 5
+srouteTopTargetLayerLimit set to 5
+End option processing: cpu: 0:00:00, real: 0:00:00, peak: 2539.00 megs.
+
+Reading DB technology information...
+Finished reading DB technology information.
+Reading floorplan and netlist information...
+Finished reading floorplan and netlist information.
+Read in 10 layers, 5 routing layers, 0 overlap layer
+Read in 85 macros, 11 used
+Read in 11 components
+  11 core components: 11 unplaced, 0 placed, 0 fixed
+Read in 73 physical pins
+  73 physical pins: 0 unplaced, 69 placed, 4 fixed
+Read in 36 logical pins
+Read in 103 nets
+Read in 2 special nets, 2 routed
+Read in 73 terminals
+2 nets selected.
+
+Begin power routing ...
+**WARN: (IMPSR-1253):	Unable to find any standard cell pin connected to the vdd net.
+ Run the globalNetConnect command or change the CPF file to ensure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as 'USE POWER' or 'USE GROUND' for the connection.
+**WARN: (IMPSR-1254):	Unable to connect the specified objects, since block pins of the vdd net were not found in the design. Check netlist or change the parameter value to include block pins in the design.
+**WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the vdd net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
+Type 'man IMPSR-1256' for more detail.
+Cannot find any AREAIO class pad pin of net vdd. Check net list, or change port class in the technology file, or change option to include pin in given range.
+**WARN: (IMPSR-1253):	Unable to find any standard cell pin connected to the vss net.
+ Run the globalNetConnect command or change the CPF file to ensure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as 'USE POWER' or 'USE GROUND' for the connection.
+**WARN: (IMPSR-1254):	Unable to connect the specified objects, since block pins of the vss net were not found in the design. Check netlist or change the parameter value to include block pins in the design.
+**WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the vss net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
+Type 'man IMPSR-1256' for more detail.
+Cannot find any AREAIO class pad pin of net vss. Check net list, or change port class in the technology file, or change option to include pin in given range.
+**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net vdd.
+Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
+**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net vdd.
+Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
+**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net vss.
+Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
+**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net vss.
+Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
+**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net vdd.
+Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
+CPU time for vdd FollowPin 0 seconds
+**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net vss.
+Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
+CPU time for vss FollowPin 0 seconds
+  Number of IO ports routed: 0
+  Number of Block ports routed: 0
+  Number of Stripe ports routed: 0
+  Number of Core ports routed: 0  open: 3
+  Number of Pad ports routed: 0
+  Number of Power Bump ports routed: 0
+  Number of Followpin connections: 3
+End power routing: cpu: 0:00:00, real: 0:00:00, peak: 2556.00 megs.
+
+
+
+ Begin updating DB with routing results ...
+ Updating DB with 73 io pins ...
+ Updating DB with 0 via definition ...
+sroute created 3 wires.
+ViaGen created 0 via, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+| metal1 |        3       |       NA       |
++--------+----------------+----------------+
+<CMD> zoomBox -27.92000 -45.64000 110.86000 78.60000
+<CMD> pan 41.11000 -14.13000
+<CMD> pan -3.78000 -53.62000
+<CMD> zoomBox 47.85000 -18.38000 133.09000 57.93000
+<CMD> zoomBox 56.51000 -13.37000 128.97000 51.50000
+<CMD> zoomBox 63.82000 -9.11000 125.41000 46.03000
+<CMD> zoomBox 75.57000 -2.46000 120.08000 37.39000
+<CMD> zoomBox 87.35000 4.20000 114.68000 28.67000
+<CMD> zoomBox 94.58000 8.29000 111.37000 23.32000
+<CMD> zoomBox 75.63000 -2.34000 120.20000 37.56000
+<CMD> zoomBox 47.83000 -17.84000 133.21000 58.59000
+<CMD> pan -41.31000 -66.45000
+<CMD> zoomBox -4.38000 -20.92000 96.07000 69.00000
+<CMD> zoomBox -17.11000 -23.66000 101.07000 82.14000
+<CMD> pan 14.07000 -13.12000
+<CMD> setDesignMode -topRoutingLayer M3
+<CMD> setPlaceMode -fp false
+<CMD> place_design
+**WARN: (IMPSP-9513):	Timing constraint file does not exist
+**WARN: (IMPSP-9514):	Non-TimingDriven placement will be performed.
+*** Starting placeDesign default flow ***
+Deleted 0 physical inst  (cell - / prefix -).
+INFO: #ExclusiveGroups=0
+INFO: There are no Exclusive Groups.
+*** Starting "NanoPlace(TM) placement v#2 (mem=1216.6M)" ...
+No user-set net weight.
+Net fanout histogram:
+2		: 90 (62.1%) nets
+3		: 18 (12.4%) nets
+4     -	14	: 37 (25.5%) nets
+15    -	39	: 0 (0.0%) nets
+40    -	79	: 0 (0.0%) nets
+80    -	159	: 0 (0.0%) nets
+160   -	319	: 0 (0.0%) nets
+320   -	639	: 0 (0.0%) nets
+640   -	1279	: 0 (0.0%) nets
+1280  -	2559	: 0 (0.0%) nets
+2560  -	5119	: 0 (0.0%) nets
+5120+		: 0 (0.0%) nets
+Options: clkGateAware ignoreScan pinGuide congEffort=auto gpeffort=medium 
+Scan chains were not defined.
+#std cell=111 (0 fixed + 111 movable) #buf cell=0 #inv cell=0 #block=0 (0 floating + 0 preplaced)
+#ioInst=0 #net=145 #term=416 #term/net=2.87, #fixedIo=0, #floatIo=0, #fixedPin=0, #floatPin=103
+stdCell: 111 single + 0 double + 0 multi
+Total standard cell length = 0.4342 (mm), area = 0.0066 (mm^2)
+Estimated cell power/ground rail width = 1.890 um
+Average module density = 1.354.
+Density for the design = 1.354.
+       = stdcell_area 402 sites (6564 um^2) / alloc_area 297 sites (4850 um^2).
+Pin Density = 1.4007.
+            = total # of pins 416 / total area 297.
+**ERROR: (IMPSP-190):	Design has util 135.4% > 100%, placer cannot proceed. The problem may be caused by density screens (softBlockages and partial blockages) or user-specified cell padding. Please correct this problem first.
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+ERROR     IMPSP-190            1  Design has util %.1f%% > 100%%, placer c...
+WARNING   IMPSP-9513           1  Timing constraint file does not exist    
+WARNING   IMPSP-9514           1  Non-TimingDriven placement will be perfo...
+*** Message Summary: 2 warning(s), 1 error(s)
+
+<CMD> pan -30.74000 -25.21000
+<CMD> zoomBox -45.39000 -32.30000 93.65000 92.17000
+<CMD> pan 18.89000 5.71000
+<CMD> createRouteBlk -box -5.28000 -12.88000 1.56000 49.36000
+<CMD> setDesignMode -topRoutingLayer M3
+<CMD> setPlaceMode -fp false
+<CMD> place_design
+*** Starting placeDesign default flow ***
+Deleted 0 physical inst  (cell - / prefix -).
+INFO: #ExclusiveGroups=0
+INFO: There are no Exclusive Groups.
+*** Starting "NanoPlace(TM) placement v#2 (mem=1241.7M)" ...
+No user-set net weight.
+Net fanout histogram:
+2		: 90 (62.1%) nets
+3		: 18 (12.4%) nets
+4     -	14	: 37 (25.5%) nets
+15    -	39	: 0 (0.0%) nets
+40    -	79	: 0 (0.0%) nets
+80    -	159	: 0 (0.0%) nets
+160   -	319	: 0 (0.0%) nets
+320   -	639	: 0 (0.0%) nets
+640   -	1279	: 0 (0.0%) nets
+1280  -	2559	: 0 (0.0%) nets
+2560  -	5119	: 0 (0.0%) nets
+5120+		: 0 (0.0%) nets
+Options: clkGateAware ignoreScan pinGuide congEffort=auto gpeffort=medium 
+Scan chains were not defined.
+#std cell=111 (0 fixed + 111 movable) #buf cell=0 #inv cell=0 #block=0 (0 floating + 0 preplaced)
+#ioInst=0 #net=145 #term=416 #term/net=2.87, #fixedIo=0, #floatIo=0, #fixedPin=0, #floatPin=103
+stdCell: 111 single + 0 double + 0 multi
+Total standard cell length = 0.4342 (mm), area = 0.0066 (mm^2)
+Average module density = 1.354.
+Density for the design = 1.354.
+       = stdcell_area 402 sites (6564 um^2) / alloc_area 297 sites (4850 um^2).
+Pin Density = 1.4007.
+            = total # of pins 416 / total area 297.
+**ERROR: (IMPSP-190):	Design has util 135.4% > 100%, placer cannot proceed. The problem may be caused by density screens (softBlockages and partial blockages) or user-specified cell padding. Please correct this problem first.
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+ERROR     IMPSP-190            1  Design has util %.1f%% > 100%%, placer c...
+*** Message Summary: 0 warning(s), 1 error(s)
+
+<CMD> zoomBox -54.18000 -62.83000 138.27000 109.45000
+<CMD> zoomBox -73.64000 -76.28000 152.77000 126.41000
+<CMD> deleteFPObject LayerShape (0,0,156,4536)

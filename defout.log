@@ -1,0 +1,17 @@
+
+********************************************************************************
+Product   : Virtuoso(R) DEF Out 
+Program   : @(#)$CDS: defout version 6.1.8-64b 08/17/2021 19:22 (cpgsrv12) $
+SubVersion: sub-version  IC6.1.8-64b.500.20 
+Started at: 12-May-2023  15:37:50
+User Name : koepcke2
+Host Name : fastx3-15.ews.illinois.edu
+Directory : /home/koepcke2/ece425.work
+DB Version: 	20210817 (SJ)
+CADENCE Design Systems, Inc.
+********************************************************************************
+Running: defout -lib ece425mp2 -cell datapath -view layout -def /home/koepcke2/ece425.work/am2901.def -ver 5.7
+
+Elapsed Time: 0.4s
+
+defout translation completed (errors: 0, warnings: 0).
