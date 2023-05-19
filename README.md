@@ -127,14 +127,33 @@ To calculate a subtraction, we invert the negative input (using the inv_r or inv
 
 ### MUX's
 
+2-to-1 MUX (inverted):
+
+![2-to-1-mux-layout](2-to-1-mux-layout.png)
+
+3-to-1 MUX:
+
+![3-to-1-mux-layout](3-to-1-mux-layout.png)
+
+4-to-1 MUX:
+
+![4-to-1-mux-layout](4-to-1-mux-layout.png)
+
 ### regbit
+
+![regbit-layout](regbit-layout.png)
 
 ### add
 
+![alu-add-layout](alu-add-layout.png)
+
 ### ALU
+
+![alu-layout](alu-layout.png)
 
 ### datapath
 
+![datapath-layout](datapath-layout.png)
 
 ## Control Unit
 
