@@ -161,7 +161,7 @@ We used Virtuoso to synthesize the control unit. We used 275 picoseconds as the 
 
 The synthesized control unit is then imported to innovus and used to generate the layout. The generated layout is shown below:
 
-[controller-layout](controller-layout.png)
+![controller-layout](controller-layout.png)
 
 ## Area
 
