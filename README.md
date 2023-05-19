@@ -102,6 +102,8 @@ The table below shows all the functions, when the inv_s and inv_r should be set 
 
 ![alu-logic-schematic](alu-logic-schematic.png)
 
+Add module:
+
 ![alu-add-schematic](alu-add-schematic.png)
 
 The logic block computes AND, OR, XOR, NOR and NAND. Part of these are useful as the output of a function (OR, AND, XOR), but some are also used to compute an addition using a Carry Chain. The stages of the carry chain are as described below:
