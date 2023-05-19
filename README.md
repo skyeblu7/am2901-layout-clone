@@ -157,7 +157,11 @@ To calculate a subtraction, we invert the negative input (using the inv_r or inv
 
 ## Control Unit
 
+We used Virtuoso to synthesize the control unit. We used 275 picoseconds as the maximum rise and fall time. The generated file is called control_synth.v.
 
+The synthesized control unit is then imported to innovus and used to generate the layout. The generated layout is shown below:
+
+[controller-layout](controller-layout.png)
 
 ## Area
 
